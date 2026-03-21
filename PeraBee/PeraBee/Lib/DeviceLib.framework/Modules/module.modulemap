@@ -1,0 +1,6 @@
+framework module DeviceLib {
+  umbrella header "DeviceLib.h"
+  export *
+
+  module * { export * }
+}
