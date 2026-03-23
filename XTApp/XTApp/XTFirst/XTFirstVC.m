@@ -70,6 +70,7 @@
         
     }];
     
+    
 }
 
 - (void)xt_popImg:(NSString *)img url:(NSString *)url text:(NSString *)text {
