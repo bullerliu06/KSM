@@ -1,0 +1,47 @@
+//
+//  UIStoryboard-Extensions.swift
+//  Collector
+//
+//  Created by Solid Omit on 4/8/19.
+//  Copyright © 2019 Sotech Company. All rights reserved.
+//
+
+import UIKit
+
+extension UIStoryboard {
+	
+	static let preferredContentSizeForFormSheetDisplay = CGSize(width: 460.0, height: 400.0)
+	
+	static var main: UIStoryboard {
+		return UIStoryboard(name: "Main", bundle: nil)
+	}
+	
+	static var add: UIStoryboard {
+		return UIStoryboard(name: "Add", bundle: nil)
+	}
+	
+	static var settings: UIStoryboard {
+		return UIStoryboard(name: "Settings", bundle: nil)
+	}
+	
+	static var inspector: UIStoryboard {
+		return UIStoryboard(name: "Inspector", bundle: nil)
+	}
+	
+	static var account: UIStoryboard {
+		return UIStoryboard(name: "Account", bundle: nil)
+	}
+	
+	func instantiateController<T>(ofType type: T.Type = T.self) -> T where T: UIViewController {
+		
+		let storyboardID = String(describing: type)
+		guard let viewController = instantiateViewController(withIdentifier: storyboardID) as? T else {
+			print("Unable to load view with Scene Identifier: \(storyboardID)")
+			fatalError()
+		}
+		
+		return viewController
+		
+	}
+	
+}

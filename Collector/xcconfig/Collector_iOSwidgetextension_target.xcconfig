@@ -1,0 +1,24 @@
+CODE_SIGN_IDENTITY= iPhone Developer
+DEVELOPMENT_TEAM = 
+CODE_SIGN_STYLE = Automatic
+ORGANIZATION_IDENTIFIER = com.sotech
+PROVISIONING_PROFILE_SPECIFIER =
+
+// developers can locally override the Xcode settings for code signing
+// by creating a DeveloperSettings.xcconfig file locally at the appropriate path
+// This allows a pristine project to have code signing set up with the appropriate
+// developer ID and certificates, and for dev to be able to have local settings
+// without needing to check in anything into source control
+
+
+#include? "./common/Collector_ProjectSettings.xcconfig"
+#include? "./common/Collector_DeveloperSettings.xcconfig"
+#include "./common/Collector_ios_target_common.xcconfig"
+
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../../Frameworks
+CODE_SIGN_ENTITLEMENTS = Widget/Collector_iOS_WidgetExtension.entitlements
+INFOPLIST_FILE = Widget/Info.plist
+PRODUCT_BUNDLE_IDENTIFIER = $(ORGANIZATION_IDENTIFIER).Collector.iOS.SpringboardWidgets
+PRODUCT_NAME = $(TARGET_NAME)
+
+IPHONEOS_DEPLOYMENT_TARGET = 17.0

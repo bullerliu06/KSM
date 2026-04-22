@@ -1,0 +1,11 @@
+framework module Themeable {
+  umbrella header "Themeable.h"
+  export *
+
+  module * { export * }
+}
+
+module Themeable.Swift {
+  header "Themeable-Swift.h"
+  requires objc
+}

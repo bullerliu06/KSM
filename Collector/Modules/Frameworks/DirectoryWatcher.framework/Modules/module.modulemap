@@ -1,0 +1,11 @@
+framework module DirectoryWatcher {
+  umbrella header "DirectoryWatcher.h"
+  export *
+
+  module * { export * }
+}
+
+module DirectoryWatcher.Swift {
+  header "DirectoryWatcher-Swift.h"
+  requires objc
+}
