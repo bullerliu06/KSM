@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class XTUserModel;
+
 @interface XTUserManger : NSObject
 
 @property(nonatomic,strong) XTUserModel * __nullable xt_user;

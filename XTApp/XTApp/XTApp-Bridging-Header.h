@@ -10,13 +10,8 @@
 
 #import "XTAPIHeader.h"
 #import "XTDefineHeader.h"
-#import "XTUserModel.h"
-#import "XTBaseVC.h"
-#import "XTNavigationController.h"
-#import "XTTabBarController.h"
-#import "XTLoginCodeVC.h"
 #import "XTDevice.h"
-#import "XTRequestCenter.h"
-#import "XTUserManger.h"
+#import "XTUtility.h"
+#import "XTRoute.h"
 
 #endif /* XTApp_Bridging_Header_h */

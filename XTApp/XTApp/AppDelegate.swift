@@ -73,8 +73,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     @objc func xt_loginView() {
         xt_nv = nil
-        let codeVC = XTLoginCodeVC()
+        let codeVC = xtController("XTLoginCodeVC")
         let navigationController = XTNavigationController(rootViewController: codeVC)
         window?.rootViewController = navigationController
+    }
+
+    private func xtController(_ name: String) -> UIViewController {
+        (NSClassFromString(name) as? NSObject.Type)?.init() as? UIViewController ?? UIViewController()
     }
 }
