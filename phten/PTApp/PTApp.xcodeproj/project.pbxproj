@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010D9A642C5A60F900116246 /* PTLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A632C5A60F900116246 /* PTLoginService.m */; };
-		010D9A682C5B686A00116246 /* PTHomeIndexService.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A672C5B686A00116246 /* PTHomeIndexService.m */; };
 		010D9A6C2C5B6CD800116246 /* PTHomeBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A6B2C5B6CD800116246 /* PTHomeBaseModel.m */; };
 		010D9A6F2C5B6FB700116246 /* PTHomeIetenNcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A6E2C5B6FB700116246 /* PTHomeIetenNcModel.m */; };
 		010D9A722C5B713500116246 /* PTHomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A712C5B713500116246 /* PTHomeBannerModel.m */; };
 		010D9A752C5B738700116246 /* PTHomeLargeEcardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A742C5B738700116246 /* PTHomeLargeEcardModel.m */; };
-		010D9A782C5B753700116246 /* PTBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A772C5B753700116246 /* PTBaseViewModel.m */; };
 		010D9A7C2C5B757A00116246 /* PTHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A7B2C5B757A00116246 /* PTHomeViewModel.m */; };
 		010D9A802C5B887700116246 /* PTHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A7F2C5B887700116246 /* PTHomeNavView.m */; };
 		010D9A842C5BA45C00116246 /* PTHomeBigCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A832C5BA45C00116246 /* PTHomeBigCardCell.m */; };
@@ -27,15 +24,11 @@
 		010D9A9D2C5E1BFE00116246 /* PTHomeBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9A9C2C5E1BFE00116246 /* PTHomeBannerCell.m */; };
 		010D9AA32C5E2C7F00116246 /* PTHomeProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9AA22C5E2C7F00116246 /* PTHomeProductModel.m */; };
 		010D9AA62C5E2F3A00116246 /* PTHomeProductListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D9AA52C5E2F3A00116246 /* PTHomeProductListCell.m */; };
-		0136CCF12C410A0100D787BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136CCF02C410A0100D787BE /* AppDelegate.m */; };
-		0136CCF72C410A0100D787BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136CCF62C410A0100D787BE /* ViewController.m */; };
 		0136CCFA2C410A0100D787BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0136CCF82C410A0100D787BE /* Main.storyboard */; };
 		0136CCFC2C410A0200D787BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0136CCFB2C410A0200D787BE /* Assets.xcassets */; };
 		0136CCFF2C410A0200D787BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0136CCFD2C410A0200D787BE /* LaunchScreen.storyboard */; };
-		0136CD022C410A0200D787BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136CD012C410A0200D787BE /* main.m */; };
 		0150E21A2C6CDBA4007CC7E2 /* PTAuthenticationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150E2192C6CDBA4007CC7E2 /* PTAuthenticationHeaderView.m */; };
 		017BA3852C4E39A10012DC1E /* PTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BA3842C4E39A10012DC1E /* PTWebViewController.m */; };
-		01813C6C2C66047300D317F4 /* PTMineIndexService.m in Sources */ = {isa = PBXBuildFile; fileRef = 01813C6B2C66047300D317F4 /* PTMineIndexService.m */; };
 		01813C702C66057500D317F4 /* PTMineViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01813C6F2C66057500D317F4 /* PTMineViewModel.m */; };
 		0189588B2C69B5AF001C97B8 /* PTMineNcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0189588A2C69B5AF001C97B8 /* PTMineNcModel.m */; };
 		0189588E2C69B9CF001C97B8 /* PTMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0189588D2C69B9CF001C97B8 /* PTMineModel.m */; };
@@ -44,22 +37,15 @@
 		0189589B2C6A1318001C97B8 /* PTMineNcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0189589A2C6A1318001C97B8 /* PTMineNcCell.m */; };
 		0189589E2C6A2983001C97B8 /* PTMineSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0189589D2C6A2983001C97B8 /* PTMineSettingController.m */; };
 		018958A12C6AFE06001C97B8 /* PTSettingLogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958A02C6AFE06001C97B8 /* PTSettingLogoutView.m */; };
-		018958A42C6B0CA6001C97B8 /* PTSettLogoutService.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958A32C6B0CA6001C97B8 /* PTSettLogoutService.m */; };
 		018958A72C6B3796001C97B8 /* PTAuthPermissionAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958A62C6B3796001C97B8 /* PTAuthPermissionAlertView.m */; };
 		018958AA2C6B5182001C97B8 /* PTAuthentRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958A92C6B5182001C97B8 /* PTAuthentRouterManager.m */; };
-		018958AD2C6B54BD001C97B8 /* PTHomeGceApplyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958AC2C6B54BD001C97B8 /* PTHomeGceApplyService.m */; };
 		018958B12C6B6E25001C97B8 /* PTAuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958B02C6B6E25001C97B8 /* PTAuthenticationController.m */; };
-		018958B52C6B7DD6001C97B8 /* PTAuthenTicationSerive.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958B42C6B7DD6001C97B8 /* PTAuthenTicationSerive.m */; };
 		018958B92C6B7EB2001C97B8 /* PTAutheticationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958B82C6B7EB2001C97B8 /* PTAutheticationViewModel.m */; };
 		018958BD2C6B7F44001C97B8 /* PTAuthenticationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958BC2C6B7F44001C97B8 /* PTAuthenticationModel.m */; };
 		018CC8E42C47A64D00077498 /* PTVCRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018CC8E32C47A64D00077498 /* PTVCRouterManager.m */; };
 		018CC8E82C47C3EB00077498 /* PTLocationManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 018CC8E72C47C3EB00077498 /* PTLocationManger.m */; };
 		018CC8EF2C491D7400077498 /* PTLanuchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018CC8EE2C491D7400077498 /* PTLanuchManager.m */; };
-		018CC8F52C49210900077498 /* PTLanuchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 018CC8F42C49210900077498 /* PTLanuchService.m */; };
-		018CC8F82C4A3A2400077498 /* PTLocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 018CC8F72C4A3A2400077498 /* PTLocationService.m */; };
 		018CC8FB2C4A3F1000077498 /* PTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018CC8FA2C4A3F1000077498 /* PTUserManager.m */; };
-		018CC9012C4A527E00077498 /* PTDeviceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 018CC9002C4A527E00077498 /* PTDeviceService.m */; };
-		01958F5B2C81B1350042C607 /* PTUploadAdidService.m in Sources */ = {isa = PBXBuildFile; fileRef = 01958F5A2C81B1350042C607 /* PTUploadAdidService.m */; };
 		0196497A2C451E6200553264 /* PTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 019649792C451E6200553264 /* PTTools.m */; };
 		0196497D2C45225700553264 /* PTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0196497C2C45225700553264 /* PTBaseRequest.m */; };
 		019649802C4524A000553264 /* PTRequestUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0196497F2C4524A000553264 /* PTRequestUrlArgumentsFilter.m */; };
@@ -91,18 +77,16 @@
 		01E672772C4F9FDD0074AFBC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E672662C4F9F410074AFBC /* Accelerate.framework */; };
 		01E672792C4F9FED0074AFBC /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E672782C4F9FED0074AFBC /* Metal.framework */; };
 		01E6727B2C4F9FF90074AFBC /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E6727A2C4F9FF90074AFBC /* MetalKit.framework */; };
-		01E6733E2C5A4A37003DE81C /* PTLoginGetSMSCodeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E6733D2C5A4A37003DE81C /* PTLoginGetSMSCodeService.m */; };
+		181EC115E019D22429C24E3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B566782932CBAE85CEFD002 /* ViewController.swift */; };
 		18D1D987DE9B635357EF8CD3 /* Pods_PTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABC39A5B698E19AD627AEF3 /* Pods_PTApp.framework */; };
 		1B0B73642C7F0AAB00D52A32 /* PTOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73632C7F0AAB00D52A32 /* PTOrderViewController.m */; };
 		1B0B73672C7F0D8C00D52A32 /* PTOrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73662C7F0D8C00D52A32 /* PTOrderListVC.m */; };
 		1B0B736A2C7F0D9D00D52A32 /* PTOrderPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73692C7F0D9D00D52A32 /* PTOrderPresenter.m */; };
 		1B0B736D2C7F0DBA00D52A32 /* PTOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B736C2C7F0DBA00D52A32 /* PTOrderCell.m */; };
 		1B0B73702C7F0DCD00D52A32 /* PTOrderNoDaraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B736F2C7F0DCD00D52A32 /* PTOrderNoDaraView.m */; };
-		1B0B73762C7F68C800D52A32 /* PTOrderAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73752C7F68C800D52A32 /* PTOrderAPI.m */; };
 		1B0B73792C7F6ADE00D52A32 /* PTOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73782C7F6ADE00D52A32 /* PTOrderModel.m */; };
 		1B0B737C2C803AA100D52A32 /* WMDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B737A2C803AA100D52A32 /* WMDragView.m */; };
 		1B0B737F2C80461400D52A32 /* PTHomePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B737E2C80461400D52A32 /* PTHomePopView.m */; };
-		1B0B73822C8046CC00D52A32 /* PTHomePopApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73812C8046CC00D52A32 /* PTHomePopApi.m */; };
 		1B0B73852C81582C00D52A32 /* PTLoginTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73842C81582B00D52A32 /* PTLoginTipView.m */; };
 		1B0B744B2C817C2000D52A32 /* NSArray+HXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73872C817C1F00D52A32 /* NSArray+HXExtension.m */; };
 		1B0B744C2C817C2000D52A32 /* NSBundle+HXPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B73892C817C1F00D52A32 /* NSBundle+HXPhotoPicker.m */; };
@@ -201,8 +185,6 @@
 		1B1B77042C7877A6002C8E23 /* PTVerifyEmailAlertListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1B77002C7877A5002C8E23 /* PTVerifyEmailAlertListCell.xib */; };
 		1B1B77062C7877A6002C8E23 /* PTVerifyEmailAlertListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B77032C7877A5002C8E23 /* PTVerifyEmailAlertListCell.m */; };
 		1B1B77092C789A54002C8E23 /* PTVerifyEmailAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B77082C789A54002C8E23 /* PTVerifyEmailAlertView.m */; };
-		1B1B770C2C78A36F002C8E23 /* PTHomeGCePushService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B770B2C78A36F002C8E23 /* PTHomeGCePushService.m */; };
-		1B1B770F2C78A431002C8E23 /* PTHomeGCeDetailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B770E2C78A431002C8E23 /* PTHomeGCeDetailService.m */; };
 		1B1B77122C78A708002C8E23 /* PTHomeApplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B77112C78A708002C8E23 /* PTHomeApplyModel.m */; };
 		1B1B77152C79D6D0002C8E23 /* PTContactVerifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B77142C79D6D0002C8E23 /* PTContactVerifyCell.m */; };
 		1B1B77182C79DFA2002C8E23 /* PTContactVerifyPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B77172C79DFA2002C8E23 /* PTContactVerifyPresenter.m */; };
@@ -229,27 +211,11 @@
 		1BB2E3642C75E4460049D8DC /* PTLiveVerifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3632C75E4460049D8DC /* PTLiveVerifyVC.m */; };
 		1BB2E3672C75E4640049D8DC /* PTBankVerifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3662C75E4640049D8DC /* PTBankVerifyVC.m */; };
 		1BB2E36B2C75E4A30049D8DC /* PTBasicVerifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E36A2C75E4A30049D8DC /* PTBasicVerifyModel.m */; };
-		1BB2E3742C75E6910049D8DC /* PTBasicVerifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3732C75E6910049D8DC /* PTBasicVerifyService.m */; };
-		1BB2E3772C75E7300049D8DC /* PTSaveBasicVerifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3762C75E7300049D8DC /* PTSaveBasicVerifyService.m */; };
-		1BB2E37B2C75E85D0049D8DC /* PTGetContactService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E37A2C75E85D0049D8DC /* PTGetContactService.m */; };
-		1BB2E37E2C75E8690049D8DC /* PTSaveContactService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E37D2C75E8690049D8DC /* PTSaveContactService.m */; };
 		1BB2E3812C75E93B0049D8DC /* PTContactVerifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3802C75E93B0049D8DC /* PTContactVerifyModel.m */; };
-		1BB2E3882C75EAFA0049D8DC /* PTGetIdentifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3872C75EAFA0049D8DC /* PTGetIdentifyService.m */; };
-		1BB2E38B2C75EB340049D8DC /* PTUploadIDImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E38A2C75EB340049D8DC /* PTUploadIDImageService.m */; };
 		1BB2E38E2C75EB800049D8DC /* PTIdentifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E38D2C75EB800049D8DC /* PTIdentifyModel.m */; };
 		1BB2E3952C75EDFE0049D8DC /* PTLiveVerifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3942C75EDFE0049D8DC /* PTLiveVerifyModel.m */; };
-		1BB2E3982C75EE290049D8DC /* PTInitLiveService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3972C75EE290049D8DC /* PTInitLiveService.m */; };
-		1BB2E39B2C75EE380049D8DC /* PTLimitLiveService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E39A2C75EE380049D8DC /* PTLimitLiveService.m */; };
-		1BB2E39E2C75EE4B0049D8DC /* PTAuthLiveService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E39D2C75EE4B0049D8DC /* PTAuthLiveService.m */; };
-		1BB2E3A12C75EE5C0049D8DC /* PTDetectionLiveService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3A02C75EE5C0049D8DC /* PTDetectionLiveService.m */; };
-		1BB2E3A42C75EE6A0049D8DC /* PTSaveLiveService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3A32C75EE6A0049D8DC /* PTSaveLiveService.m */; };
-		1BB2E3A72C75EE850049D8DC /* PTAuthErrorLiveService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3A62C75EE850049D8DC /* PTAuthErrorLiveService.m */; };
 		1BB2E3AE2C75EF620049D8DC /* PTBankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3AD2C75EF620049D8DC /* PTBankModel.m */; };
-		1BB2E3B12C75EF820049D8DC /* PTGetBankService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3B02C75EF820049D8DC /* PTGetBankService.m */; };
-		1BB2E3B42C75EF910049D8DC /* PTSaveBankService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3B32C75EF910049D8DC /* PTSaveBankService.m */; };
-		1BB2E3B72C75F14F0049D8DC /* PTSaveIdentifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3B62C75F14F0049D8DC /* PTSaveIdentifyService.m */; };
 		1BB2E3BA2C76CCA20049D8DC /* PTAuthListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3B92C76CCA20049D8DC /* PTAuthListCell.m */; };
-		1BB2E3BD2C76CDCB0049D8DC /* PTBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3BC2C76CDCB0049D8DC /* PTBaseTableViewCell.m */; };
 		1BB2E3C02C76CE750049D8DC /* PTVerifyPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3BF2C76CE750049D8DC /* PTVerifyPickerCell.m */; };
 		1BB2E3C32C76EDE00049D8DC /* PTVerifyPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3C22C76EDE00049D8DC /* PTVerifyPickerView.m */; };
 		1BB2E3EE2C7703830049D8DC /* NSArray+BRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E3C72C7703830049D8DC /* NSArray+BRAdd.m */; };
@@ -276,13 +242,16 @@
 		1BB2E40B2C770A290049D8DC /* PTBasicVerifyPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E40A2C770A290049D8DC /* PTBasicVerifyPresenter.m */; };
 		1BB2E40F2C771F7D0049D8DC /* PTVerifyEnumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E40E2C771F7D0049D8DC /* PTVerifyEnumCell.m */; };
 		1BB2E4122C77314A0049D8DC /* PTBasicVerifySectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E4112C77314A0049D8DC /* PTBasicVerifySectionHeader.m */; };
+		396B7A4D3FB418C189981EFC /* PTServiceRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF86104528BC653C3AD28A8 /* PTServiceRequests.swift */; };
+		46968A84AFF79BC4BEE6A3A6 /* PTLanuchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CE6CE61F53C9EE4ECFAB4 /* PTLanuchServices.swift */; };
+		95967962E084159BB55259FD /* PTUploadIDImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118B49AE9FBA70D7375447 /* PTUploadIDImageService.swift */; };
+		A6774D7A2EBD3968238F323B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBD7347B456E1935EAFC1F5 /* AppDelegate.swift */; };
+		EEF0F6AEDA02F2863B351460 /* PTBaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEEC69E5C5CCF655A7A671 /* PTBaseSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		010D9A622C5A60F900116246 /* PTLoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLoginService.h; sourceTree = "<group>"; };
-		010D9A632C5A60F900116246 /* PTLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLoginService.m; sourceTree = "<group>"; };
 		010D9A662C5B686A00116246 /* PTHomeIndexService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeIndexService.h; sourceTree = "<group>"; };
-		010D9A672C5B686A00116246 /* PTHomeIndexService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeIndexService.m; sourceTree = "<group>"; };
 		010D9A6A2C5B6CD800116246 /* PTHomeBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeBaseModel.h; sourceTree = "<group>"; };
 		010D9A6B2C5B6CD800116246 /* PTHomeBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeBaseModel.m; sourceTree = "<group>"; };
 		010D9A6D2C5B6FB700116246 /* PTHomeIetenNcModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeIetenNcModel.h; sourceTree = "<group>"; };
@@ -292,7 +261,6 @@
 		010D9A732C5B738700116246 /* PTHomeLargeEcardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeLargeEcardModel.h; sourceTree = "<group>"; };
 		010D9A742C5B738700116246 /* PTHomeLargeEcardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeLargeEcardModel.m; sourceTree = "<group>"; };
 		010D9A762C5B753700116246 /* PTBaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBaseViewModel.h; sourceTree = "<group>"; };
-		010D9A772C5B753700116246 /* PTBaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBaseViewModel.m; sourceTree = "<group>"; };
 		010D9A7A2C5B757A00116246 /* PTHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeViewModel.h; sourceTree = "<group>"; };
 		010D9A7B2C5B757A00116246 /* PTHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeViewModel.m; sourceTree = "<group>"; };
 		010D9A7E2C5B887700116246 /* PTHomeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeNavView.h; sourceTree = "<group>"; };
@@ -321,20 +289,16 @@
 		010D9AA52C5E2F3A00116246 /* PTHomeProductListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeProductListCell.m; sourceTree = "<group>"; };
 		0136CCEC2C410A0100D787BE /* PTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0136CCEF2C410A0100D787BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0136CCF02C410A0100D787BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0136CCF52C410A0100D787BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0136CCF62C410A0100D787BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0136CCF92C410A0100D787BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0136CCFB2C410A0200D787BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0136CCFE2C410A0200D787BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0136CD002C410A0200D787BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0136CD012C410A0200D787BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0150E2182C6CDBA4007CC7E2 /* PTAuthenticationHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthenticationHeaderView.h; sourceTree = "<group>"; };
 		0150E2192C6CDBA4007CC7E2 /* PTAuthenticationHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthenticationHeaderView.m; sourceTree = "<group>"; };
 		017BA3832C4E39A10012DC1E /* PTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTWebViewController.h; sourceTree = "<group>"; };
 		017BA3842C4E39A10012DC1E /* PTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTWebViewController.m; sourceTree = "<group>"; };
 		01813C6A2C66047300D317F4 /* PTMineIndexService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTMineIndexService.h; sourceTree = "<group>"; };
-		01813C6B2C66047300D317F4 /* PTMineIndexService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTMineIndexService.m; sourceTree = "<group>"; };
 		01813C6E2C66057500D317F4 /* PTMineViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTMineViewModel.h; sourceTree = "<group>"; };
 		01813C6F2C66057500D317F4 /* PTMineViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTMineViewModel.m; sourceTree = "<group>"; };
 		018958892C69B5AF001C97B8 /* PTMineNcModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTMineNcModel.h; sourceTree = "<group>"; };
@@ -352,17 +316,14 @@
 		0189589F2C6AFE06001C97B8 /* PTSettingLogoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSettingLogoutView.h; sourceTree = "<group>"; };
 		018958A02C6AFE06001C97B8 /* PTSettingLogoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSettingLogoutView.m; sourceTree = "<group>"; };
 		018958A22C6B0CA6001C97B8 /* PTSettLogoutService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSettLogoutService.h; sourceTree = "<group>"; };
-		018958A32C6B0CA6001C97B8 /* PTSettLogoutService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSettLogoutService.m; sourceTree = "<group>"; };
 		018958A52C6B3796001C97B8 /* PTAuthPermissionAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthPermissionAlertView.h; sourceTree = "<group>"; };
 		018958A62C6B3796001C97B8 /* PTAuthPermissionAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthPermissionAlertView.m; sourceTree = "<group>"; };
 		018958A82C6B5182001C97B8 /* PTAuthentRouterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthentRouterManager.h; sourceTree = "<group>"; };
 		018958A92C6B5182001C97B8 /* PTAuthentRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthentRouterManager.m; sourceTree = "<group>"; };
 		018958AB2C6B54BD001C97B8 /* PTHomeGceApplyService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeGceApplyService.h; sourceTree = "<group>"; };
-		018958AC2C6B54BD001C97B8 /* PTHomeGceApplyService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeGceApplyService.m; sourceTree = "<group>"; };
 		018958AF2C6B6E25001C97B8 /* PTAuthenticationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthenticationController.h; sourceTree = "<group>"; };
 		018958B02C6B6E25001C97B8 /* PTAuthenticationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthenticationController.m; sourceTree = "<group>"; };
 		018958B32C6B7DD6001C97B8 /* PTAuthenTicationSerive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthenTicationSerive.h; sourceTree = "<group>"; };
-		018958B42C6B7DD6001C97B8 /* PTAuthenTicationSerive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthenTicationSerive.m; sourceTree = "<group>"; };
 		018958B72C6B7EB2001C97B8 /* PTAutheticationViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAutheticationViewModel.h; sourceTree = "<group>"; };
 		018958B82C6B7EB2001C97B8 /* PTAutheticationViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAutheticationViewModel.m; sourceTree = "<group>"; };
 		018958BB2C6B7F44001C97B8 /* PTAuthenticationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthenticationModel.h; sourceTree = "<group>"; };
@@ -375,16 +336,12 @@
 		018CC8ED2C491D7400077498 /* PTLanuchManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLanuchManager.h; sourceTree = "<group>"; };
 		018CC8EE2C491D7400077498 /* PTLanuchManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLanuchManager.m; sourceTree = "<group>"; };
 		018CC8F32C49210900077498 /* PTLanuchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLanuchService.h; sourceTree = "<group>"; };
-		018CC8F42C49210900077498 /* PTLanuchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLanuchService.m; sourceTree = "<group>"; };
 		018CC8F62C4A3A2400077498 /* PTLocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLocationService.h; sourceTree = "<group>"; };
-		018CC8F72C4A3A2400077498 /* PTLocationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLocationService.m; sourceTree = "<group>"; };
 		018CC8F92C4A3F1000077498 /* PTUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTUserManager.h; sourceTree = "<group>"; };
 		018CC8FA2C4A3F1000077498 /* PTUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTUserManager.m; sourceTree = "<group>"; };
 		018CC8FF2C4A527E00077498 /* PTDeviceService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTDeviceService.h; sourceTree = "<group>"; };
-		018CC9002C4A527E00077498 /* PTDeviceService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTDeviceService.m; sourceTree = "<group>"; };
 		018CC9022C4A63A500077498 /* PTApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PTApp.entitlements; sourceTree = "<group>"; };
 		01958F592C81B1350042C607 /* PTUploadAdidService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTUploadAdidService.h; sourceTree = "<group>"; };
-		01958F5A2C81B1350042C607 /* PTUploadAdidService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTUploadAdidService.m; sourceTree = "<group>"; };
 		019649742C45178500553264 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		019649752C451AE600553264 /* PTHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHeader.h; sourceTree = "<group>"; };
 		019649782C451E6200553264 /* PTTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTTools.h; sourceTree = "<group>"; };
@@ -435,7 +392,6 @@
 		01E672782C4F9FED0074AFBC /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		01E6727A2C4F9FF90074AFBC /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		01E6733C2C5A4A37003DE81C /* PTLoginGetSMSCodeService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLoginGetSMSCodeService.h; sourceTree = "<group>"; };
-		01E6733D2C5A4A37003DE81C /* PTLoginGetSMSCodeService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLoginGetSMSCodeService.m; sourceTree = "<group>"; };
 		1B0B73622C7F0AAB00D52A32 /* PTOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTOrderViewController.h; sourceTree = "<group>"; };
 		1B0B73632C7F0AAB00D52A32 /* PTOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTOrderViewController.m; sourceTree = "<group>"; };
 		1B0B73652C7F0D8C00D52A32 /* PTOrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTOrderListVC.h; sourceTree = "<group>"; };
@@ -447,7 +403,6 @@
 		1B0B736E2C7F0DCD00D52A32 /* PTOrderNoDaraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTOrderNoDaraView.h; sourceTree = "<group>"; };
 		1B0B736F2C7F0DCD00D52A32 /* PTOrderNoDaraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTOrderNoDaraView.m; sourceTree = "<group>"; };
 		1B0B73742C7F68C800D52A32 /* PTOrderAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTOrderAPI.h; sourceTree = "<group>"; };
-		1B0B73752C7F68C800D52A32 /* PTOrderAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTOrderAPI.m; sourceTree = "<group>"; };
 		1B0B73772C7F6ADE00D52A32 /* PTOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTOrderModel.h; sourceTree = "<group>"; };
 		1B0B73782C7F6ADE00D52A32 /* PTOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTOrderModel.m; sourceTree = "<group>"; };
 		1B0B737A2C803AA100D52A32 /* WMDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDragView.m; sourceTree = "<group>"; };
@@ -455,7 +410,6 @@
 		1B0B737D2C80461400D52A32 /* PTHomePopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomePopView.h; sourceTree = "<group>"; };
 		1B0B737E2C80461400D52A32 /* PTHomePopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomePopView.m; sourceTree = "<group>"; };
 		1B0B73802C8046CC00D52A32 /* PTHomePopApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomePopApi.h; sourceTree = "<group>"; };
-		1B0B73812C8046CC00D52A32 /* PTHomePopApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomePopApi.m; sourceTree = "<group>"; };
 		1B0B73832C81582B00D52A32 /* PTLoginTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLoginTipView.h; sourceTree = "<group>"; };
 		1B0B73842C81582B00D52A32 /* PTLoginTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLoginTipView.m; sourceTree = "<group>"; };
 		1B0B73862C817C1F00D52A32 /* NSArray+HXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HXExtension.h"; sourceTree = "<group>"; };
@@ -656,9 +610,7 @@
 		1B1B77072C789A54002C8E23 /* PTVerifyEmailAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVerifyEmailAlertView.h; sourceTree = "<group>"; };
 		1B1B77082C789A54002C8E23 /* PTVerifyEmailAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVerifyEmailAlertView.m; sourceTree = "<group>"; };
 		1B1B770A2C78A36F002C8E23 /* PTHomeGCePushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeGCePushService.h; sourceTree = "<group>"; };
-		1B1B770B2C78A36F002C8E23 /* PTHomeGCePushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeGCePushService.m; sourceTree = "<group>"; };
 		1B1B770D2C78A431002C8E23 /* PTHomeGCeDetailService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeGCeDetailService.h; sourceTree = "<group>"; };
-		1B1B770E2C78A431002C8E23 /* PTHomeGCeDetailService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeGCeDetailService.m; sourceTree = "<group>"; };
 		1B1B77102C78A708002C8E23 /* PTHomeApplyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTHomeApplyModel.h; sourceTree = "<group>"; };
 		1B1B77112C78A708002C8E23 /* PTHomeApplyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTHomeApplyModel.m; sourceTree = "<group>"; };
 		1B1B77132C79D6D0002C8E23 /* PTContactVerifyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTContactVerifyCell.h; sourceTree = "<group>"; };
@@ -712,47 +664,31 @@
 		1BB2E3692C75E4A30049D8DC /* PTBasicVerifyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBasicVerifyModel.h; sourceTree = "<group>"; };
 		1BB2E36A2C75E4A30049D8DC /* PTBasicVerifyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBasicVerifyModel.m; sourceTree = "<group>"; };
 		1BB2E3722C75E6910049D8DC /* PTBasicVerifyService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBasicVerifyService.h; sourceTree = "<group>"; };
-		1BB2E3732C75E6910049D8DC /* PTBasicVerifyService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBasicVerifyService.m; sourceTree = "<group>"; };
 		1BB2E3752C75E7300049D8DC /* PTSaveBasicVerifyService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSaveBasicVerifyService.h; sourceTree = "<group>"; };
-		1BB2E3762C75E7300049D8DC /* PTSaveBasicVerifyService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSaveBasicVerifyService.m; sourceTree = "<group>"; };
 		1BB2E3792C75E85D0049D8DC /* PTGetContactService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGetContactService.h; sourceTree = "<group>"; };
-		1BB2E37A2C75E85D0049D8DC /* PTGetContactService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGetContactService.m; sourceTree = "<group>"; };
 		1BB2E37C2C75E8690049D8DC /* PTSaveContactService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSaveContactService.h; sourceTree = "<group>"; };
-		1BB2E37D2C75E8690049D8DC /* PTSaveContactService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSaveContactService.m; sourceTree = "<group>"; };
 		1BB2E37F2C75E93B0049D8DC /* PTContactVerifyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTContactVerifyModel.h; sourceTree = "<group>"; };
 		1BB2E3802C75E93B0049D8DC /* PTContactVerifyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTContactVerifyModel.m; sourceTree = "<group>"; };
 		1BB2E3862C75EAFA0049D8DC /* PTGetIdentifyService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGetIdentifyService.h; sourceTree = "<group>"; };
-		1BB2E3872C75EAFA0049D8DC /* PTGetIdentifyService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGetIdentifyService.m; sourceTree = "<group>"; };
 		1BB2E3892C75EB340049D8DC /* PTUploadIDImageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTUploadIDImageService.h; sourceTree = "<group>"; };
-		1BB2E38A2C75EB340049D8DC /* PTUploadIDImageService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTUploadIDImageService.m; sourceTree = "<group>"; };
 		1BB2E38C2C75EB800049D8DC /* PTIdentifyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTIdentifyModel.h; sourceTree = "<group>"; };
 		1BB2E38D2C75EB800049D8DC /* PTIdentifyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTIdentifyModel.m; sourceTree = "<group>"; };
 		1BB2E3932C75EDFE0049D8DC /* PTLiveVerifyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLiveVerifyModel.h; sourceTree = "<group>"; };
 		1BB2E3942C75EDFE0049D8DC /* PTLiveVerifyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLiveVerifyModel.m; sourceTree = "<group>"; };
 		1BB2E3962C75EE290049D8DC /* PTInitLiveService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTInitLiveService.h; sourceTree = "<group>"; };
-		1BB2E3972C75EE290049D8DC /* PTInitLiveService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTInitLiveService.m; sourceTree = "<group>"; };
 		1BB2E3992C75EE380049D8DC /* PTLimitLiveService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLimitLiveService.h; sourceTree = "<group>"; };
-		1BB2E39A2C75EE380049D8DC /* PTLimitLiveService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLimitLiveService.m; sourceTree = "<group>"; };
 		1BB2E39C2C75EE4B0049D8DC /* PTAuthLiveService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthLiveService.h; sourceTree = "<group>"; };
-		1BB2E39D2C75EE4B0049D8DC /* PTAuthLiveService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthLiveService.m; sourceTree = "<group>"; };
 		1BB2E39F2C75EE5C0049D8DC /* PTDetectionLiveService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTDetectionLiveService.h; sourceTree = "<group>"; };
-		1BB2E3A02C75EE5C0049D8DC /* PTDetectionLiveService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTDetectionLiveService.m; sourceTree = "<group>"; };
 		1BB2E3A22C75EE6A0049D8DC /* PTSaveLiveService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSaveLiveService.h; sourceTree = "<group>"; };
-		1BB2E3A32C75EE6A0049D8DC /* PTSaveLiveService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSaveLiveService.m; sourceTree = "<group>"; };
 		1BB2E3A52C75EE850049D8DC /* PTAuthErrorLiveService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthErrorLiveService.h; sourceTree = "<group>"; };
-		1BB2E3A62C75EE850049D8DC /* PTAuthErrorLiveService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthErrorLiveService.m; sourceTree = "<group>"; };
 		1BB2E3AC2C75EF620049D8DC /* PTBankModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBankModel.h; sourceTree = "<group>"; };
 		1BB2E3AD2C75EF620049D8DC /* PTBankModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBankModel.m; sourceTree = "<group>"; };
 		1BB2E3AF2C75EF820049D8DC /* PTGetBankService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGetBankService.h; sourceTree = "<group>"; };
-		1BB2E3B02C75EF820049D8DC /* PTGetBankService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGetBankService.m; sourceTree = "<group>"; };
 		1BB2E3B22C75EF910049D8DC /* PTSaveBankService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSaveBankService.h; sourceTree = "<group>"; };
-		1BB2E3B32C75EF910049D8DC /* PTSaveBankService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSaveBankService.m; sourceTree = "<group>"; };
 		1BB2E3B52C75F14F0049D8DC /* PTSaveIdentifyService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSaveIdentifyService.h; sourceTree = "<group>"; };
-		1BB2E3B62C75F14F0049D8DC /* PTSaveIdentifyService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSaveIdentifyService.m; sourceTree = "<group>"; };
 		1BB2E3B82C76CCA20049D8DC /* PTAuthListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthListCell.h; sourceTree = "<group>"; };
 		1BB2E3B92C76CCA20049D8DC /* PTAuthListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthListCell.m; sourceTree = "<group>"; };
 		1BB2E3BB2C76CDCB0049D8DC /* PTBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBaseTableViewCell.h; sourceTree = "<group>"; };
-		1BB2E3BC2C76CDCB0049D8DC /* PTBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBaseTableViewCell.m; sourceTree = "<group>"; };
 		1BB2E3BE2C76CE750049D8DC /* PTVerifyPickerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTVerifyPickerCell.h; sourceTree = "<group>"; };
 		1BB2E3BF2C76CE750049D8DC /* PTVerifyPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTVerifyPickerCell.m; sourceTree = "<group>"; };
 		1BB2E3C12C76EDE00049D8DC /* PTVerifyPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTVerifyPickerView.h; sourceTree = "<group>"; };
@@ -809,9 +745,16 @@
 		1BB2E40E2C771F7D0049D8DC /* PTVerifyEnumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTVerifyEnumCell.m; sourceTree = "<group>"; };
 		1BB2E4102C77314A0049D8DC /* PTBasicVerifySectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBasicVerifySectionHeader.h; sourceTree = "<group>"; };
 		1BB2E4112C77314A0049D8DC /* PTBasicVerifySectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBasicVerifySectionHeader.m; sourceTree = "<group>"; };
+		220CE6CE61F53C9EE4ECFAB4 /* PTLanuchServices.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PTLanuchServices.swift; sourceTree = "<group>"; };
 		322A31CE7EB792C0615F44D5 /* Pods-PTApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.debug.xcconfig"; path = "Target Support Files/Pods-PTApp/Pods-PTApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4A723333BB5533DA65A8D17D /* PTApp-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PTApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B566782932CBAE85CEFD002 /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5173474889C09504158113C1 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
+		8DF86104528BC653C3AD28A8 /* PTServiceRequests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PTServiceRequests.swift; sourceTree = "<group>"; };
+		9BBD7347B456E1935EAFC1F5 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E118B49AE9FBA70D7375447 /* PTUploadIDImageService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PTUploadIDImageService.swift; sourceTree = "<group>"; };
 		EABC39A5B698E19AD627AEF3 /* Pods_PTApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BEEC69E5C5CCF655A7A671 /* PTBaseSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PTBaseSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -842,15 +785,10 @@
 			isa = PBXGroup;
 			children = (
 				010D9A662C5B686A00116246 /* PTHomeIndexService.h */,
-				010D9A672C5B686A00116246 /* PTHomeIndexService.m */,
 				018958AB2C6B54BD001C97B8 /* PTHomeGceApplyService.h */,
-				018958AC2C6B54BD001C97B8 /* PTHomeGceApplyService.m */,
 				1B1B770D2C78A431002C8E23 /* PTHomeGCeDetailService.h */,
-				1B1B770E2C78A431002C8E23 /* PTHomeGCeDetailService.m */,
 				1B1B770A2C78A36F002C8E23 /* PTHomeGCePushService.h */,
-				1B1B770B2C78A36F002C8E23 /* PTHomeGCePushService.m */,
 				1B0B73802C8046CC00D52A32 /* PTHomePopApi.h */,
-				1B0B73812C8046CC00D52A32 /* PTHomePopApi.m */,
 			);
 			path = PTHomeService;
 			sourceTree = "<group>";
@@ -960,7 +898,6 @@
 			children = (
 				018CC9022C4A63A500077498 /* PTApp.entitlements */,
 				0136CCEF2C410A0100D787BE /* AppDelegate.h */,
-				0136CCF02C410A0100D787BE /* AppDelegate.m */,
 				019649772C451DC600553264 /* PTTools */,
 				019649762C451D8D00553264 /* PTHeader */,
 				019649732C45168500553264 /* PTBase */,
@@ -968,13 +905,14 @@
 				018CC8F02C49202700077498 /* PTPages */,
 				019649842C4536CF00553264 /* Library */,
 				0136CCF52C410A0100D787BE /* ViewController.h */,
-				0136CCF62C410A0100D787BE /* ViewController.m */,
 				0136CCF82C410A0100D787BE /* Main.storyboard */,
 				01C4C1F52C525BD300916E88 /* PrivacyInfo.xcprivacy */,
 				0136CCFB2C410A0200D787BE /* Assets.xcassets */,
 				0136CCFD2C410A0200D787BE /* LaunchScreen.storyboard */,
 				0136CD002C410A0200D787BE /* Info.plist */,
-				0136CD012C410A0200D787BE /* main.m */,
+				9BBD7347B456E1935EAFC1F5 /* AppDelegate.swift */,
+				4A723333BB5533DA65A8D17D /* PTApp-Bridging-Header.h */,
+				4B566782932CBAE85CEFD002 /* ViewController.swift */,
 			);
 			path = PTApp;
 			sourceTree = "<group>";
@@ -1003,9 +941,7 @@
 			isa = PBXGroup;
 			children = (
 				01813C6A2C66047300D317F4 /* PTMineIndexService.h */,
-				01813C6B2C66047300D317F4 /* PTMineIndexService.m */,
 				018958A22C6B0CA6001C97B8 /* PTSettLogoutService.h */,
-				018958A32C6B0CA6001C97B8 /* PTSettLogoutService.m */,
 			);
 			path = PTMineService;
 			sourceTree = "<group>";
@@ -1069,7 +1005,6 @@
 			isa = PBXGroup;
 			children = (
 				018958B32C6B7DD6001C97B8 /* PTAuthenTicationSerive.h */,
-				018958B42C6B7DD6001C97B8 /* PTAuthenTicationSerive.m */,
 			);
 			path = PTAuthenticationService;
 			sourceTree = "<group>";
@@ -1122,6 +1057,7 @@
 				01A9213F2C52029D001E9B70 /* PTTabPages */,
 				017BA3822C4E39260012DC1E /* PTWebViewController */,
 				018CC8F12C49207300077498 /* PTLanuch */,
+				8DF86104528BC653C3AD28A8 /* PTServiceRequests.swift */,
 			);
 			path = PTPages;
 			sourceTree = "<group>";
@@ -1138,13 +1074,10 @@
 			isa = PBXGroup;
 			children = (
 				018CC8F32C49210900077498 /* PTLanuchService.h */,
-				018CC8F42C49210900077498 /* PTLanuchService.m */,
 				018CC8F62C4A3A2400077498 /* PTLocationService.h */,
-				018CC8F72C4A3A2400077498 /* PTLocationService.m */,
 				018CC8FF2C4A527E00077498 /* PTDeviceService.h */,
-				018CC9002C4A527E00077498 /* PTDeviceService.m */,
 				01958F592C81B1350042C607 /* PTUploadAdidService.h */,
-				01958F5A2C81B1350042C607 /* PTUploadAdidService.m */,
+				220CE6CE61F53C9EE4ECFAB4 /* PTLanuchServices.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1165,10 +1098,9 @@
 				0196499C2C4672F200553264 /* PTTabBarViewController.h */,
 				0196499D2C4672F200553264 /* PTTabBarViewController.m */,
 				010D9A762C5B753700116246 /* PTBaseViewModel.h */,
-				010D9A772C5B753700116246 /* PTBaseViewModel.m */,
 				1BB2E3BB2C76CDCB0049D8DC /* PTBaseTableViewCell.h */,
-				1BB2E3BC2C76CDCB0049D8DC /* PTBaseTableViewCell.m */,
 				1BB2E40C2C770B660049D8DC /* PTBaseProtocol.h */,
+				F8BEEC69E5C5CCF655A7A671 /* PTBaseSupport.swift */,
 			);
 			path = PTBase;
 			sourceTree = "<group>";
@@ -1289,9 +1221,7 @@
 			isa = PBXGroup;
 			children = (
 				01E6733C2C5A4A37003DE81C /* PTLoginGetSMSCodeService.h */,
-				01E6733D2C5A4A37003DE81C /* PTLoginGetSMSCodeService.m */,
 				010D9A622C5A60F900116246 /* PTLoginService.h */,
-				010D9A632C5A60F900116246 /* PTLoginService.m */,
 			);
 			path = PTLoginService;
 			sourceTree = "<group>";
@@ -1326,7 +1256,6 @@
 				1B0B736E2C7F0DCD00D52A32 /* PTOrderNoDaraView.h */,
 				1B0B736F2C7F0DCD00D52A32 /* PTOrderNoDaraView.m */,
 				1B0B73742C7F68C800D52A32 /* PTOrderAPI.h */,
-				1B0B73752C7F68C800D52A32 /* PTOrderAPI.m */,
 				1B0B73772C7F6ADE00D52A32 /* PTOrderModel.h */,
 				1B0B73782C7F6ADE00D52A32 /* PTOrderModel.m */,
 			);
@@ -1773,9 +1702,7 @@
 			isa = PBXGroup;
 			children = (
 				1BB2E3722C75E6910049D8DC /* PTBasicVerifyService.h */,
-				1BB2E3732C75E6910049D8DC /* PTBasicVerifyService.m */,
 				1BB2E3752C75E7300049D8DC /* PTSaveBasicVerifyService.h */,
-				1BB2E3762C75E7300049D8DC /* PTSaveBasicVerifyService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1784,9 +1711,7 @@
 			isa = PBXGroup;
 			children = (
 				1BB2E3792C75E85D0049D8DC /* PTGetContactService.h */,
-				1BB2E37A2C75E85D0049D8DC /* PTGetContactService.m */,
 				1BB2E37C2C75E8690049D8DC /* PTSaveContactService.h */,
-				1BB2E37D2C75E8690049D8DC /* PTSaveContactService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1827,11 +1752,9 @@
 			isa = PBXGroup;
 			children = (
 				1BB2E3862C75EAFA0049D8DC /* PTGetIdentifyService.h */,
-				1BB2E3872C75EAFA0049D8DC /* PTGetIdentifyService.m */,
 				1BB2E3892C75EB340049D8DC /* PTUploadIDImageService.h */,
-				1BB2E38A2C75EB340049D8DC /* PTUploadIDImageService.m */,
 				1BB2E3B52C75F14F0049D8DC /* PTSaveIdentifyService.h */,
-				1BB2E3B62C75F14F0049D8DC /* PTSaveIdentifyService.m */,
+				9E118B49AE9FBA70D7375447 /* PTUploadIDImageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1867,17 +1790,11 @@
 			isa = PBXGroup;
 			children = (
 				1BB2E3962C75EE290049D8DC /* PTInitLiveService.h */,
-				1BB2E3972C75EE290049D8DC /* PTInitLiveService.m */,
 				1BB2E3992C75EE380049D8DC /* PTLimitLiveService.h */,
-				1BB2E39A2C75EE380049D8DC /* PTLimitLiveService.m */,
 				1BB2E39C2C75EE4B0049D8DC /* PTAuthLiveService.h */,
-				1BB2E39D2C75EE4B0049D8DC /* PTAuthLiveService.m */,
 				1BB2E39F2C75EE5C0049D8DC /* PTDetectionLiveService.h */,
-				1BB2E3A02C75EE5C0049D8DC /* PTDetectionLiveService.m */,
 				1BB2E3A22C75EE6A0049D8DC /* PTSaveLiveService.h */,
-				1BB2E3A32C75EE6A0049D8DC /* PTSaveLiveService.m */,
 				1BB2E3A52C75EE850049D8DC /* PTAuthErrorLiveService.h */,
-				1BB2E3A62C75EE850049D8DC /* PTAuthErrorLiveService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1921,9 +1838,7 @@
 			isa = PBXGroup;
 			children = (
 				1BB2E3AF2C75EF820049D8DC /* PTGetBankService.h */,
-				1BB2E3B02C75EF820049D8DC /* PTGetBankService.m */,
 				1BB2E3B22C75EF910049D8DC /* PTSaveBankService.h */,
-				1BB2E3B32C75EF910049D8DC /* PTSaveBankService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -2136,8 +2051,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0136CCF72C410A0100D787BE /* ViewController.m in Sources */,
-				1BB2E39E2C75EE4B0049D8DC /* PTAuthLiveService.m in Sources */,
 				1BB2E36B2C75E4A30049D8DC /* PTBasicVerifyModel.m in Sources */,
 				1B0B746C2C817C2000D52A32 /* HXPhotoEditDrawView.m in Sources */,
 				1B0B748C2C817C2000D52A32 /* HXCameraBottomView.m in Sources */,
@@ -2146,30 +2059,24 @@
 				1B0B74522C817C2000D52A32 /* UIColor+HXExtension.m in Sources */,
 				018CC8E82C47C3EB00077498 /* PTLocationManger.m in Sources */,
 				1B0B74602C817C2000D52A32 /* HXPhotoViewController.m in Sources */,
-				018CC8F52C49210900077498 /* PTLanuchService.m in Sources */,
 				1B1B772A2C7AFBE9002C8E23 /* UIViewController+PTPhoto.m in Sources */,
 				1B0B73852C81582C00D52A32 /* PTLoginTipView.m in Sources */,
 				1B1B77152C79D6D0002C8E23 /* PTContactVerifyCell.m in Sources */,
 				1BB2E3612C75E4380049D8DC /* PTIdentifyVerifyVC.m in Sources */,
 				018CC8EF2C491D7400077498 /* PTLanuchManager.m in Sources */,
 				1B0B74992C817C2000D52A32 /* HXPhotoPreviewViewCell.m in Sources */,
-				1BB2E38B2C75EB340049D8DC /* PTUploadIDImageService.m in Sources */,
 				01A921472C52033C001E9B70 /* PTMineController.m in Sources */,
-				010D9A782C5B753700116246 /* PTBaseViewModel.m in Sources */,
 				1B0B74622C817C2000D52A32 /* HX_PhotoEditViewController.m in Sources */,
-				1BB2E3B42C75EF910049D8DC /* PTSaveBankService.m in Sources */,
 				1B0B74872C817C2000D52A32 /* HXPhotoInteractiveTransition.m in Sources */,
 				1B0B736D2C7F0DBA00D52A32 /* PTOrderCell.m in Sources */,
 				1B0B744E2C817C2000D52A32 /* NSString+HXExtension.m in Sources */,
 				1BB2E35B2C75E40D0049D8DC /* PTBasicVerifyVC.m in Sources */,
-				010D9A682C5B686A00116246 /* PTHomeIndexService.m in Sources */,
 				1BB2E3FC2C7703830049D8DC /* UITextField+BRAdd.m in Sources */,
 				1B0B737C2C803AA100D52A32 /* WMDragView.m in Sources */,
 				01C4C1F42C52552100916E88 /* PTLoginController.m in Sources */,
 				1B0B748D2C817C2000D52A32 /* HXCircleProgressView.m in Sources */,
 				01BD0E0D2C59F15900998706 /* PTCountDownButton.m in Sources */,
 				1B0B747C2C817C2000D52A32 /* HXPhotoEditStickerTrashView.m in Sources */,
-				018CC8F82C4A3A2400077498 /* PTLocationService.m in Sources */,
 				1B0B747D2C817C2000D52A32 /* HXPhotoEditStickerView.m in Sources */,
 				1B0B74A92C81D2B200D52A32 /* EllipsePageControl.m in Sources */,
 				1BB2E3EE2C7703830049D8DC /* NSArray+BRAdd.m in Sources */,
@@ -2188,20 +2095,17 @@
 				1B1B77452C7C3278002C8E23 /* PTBankPresenter.m in Sources */,
 				018958BD2C6B7F44001C97B8 /* PTAuthenticationModel.m in Sources */,
 				1BB2E3F62C7703830049D8DC /* UIButton+BRAdd.m in Sources */,
-				01813C6C2C66047300D317F4 /* PTMineIndexService.m in Sources */,
 				1B1B77302C7B5E9C002C8E23 /* PTLiveBgView.m in Sources */,
 				018958962C6A0A0E001C97B8 /* PTMineItemCell.m in Sources */,
 				1B0B747E2C817C2000D52A32 /* HXPhotoEditTextView.m in Sources */,
 				019649942C465DF700553264 /* PTBaseVC.m in Sources */,
 				1BB2E3EF2C7703830049D8DC /* NSDate+BRAdd.m in Sources */,
-				1BB2E3B12C75EF820049D8DC /* PTGetBankService.m in Sources */,
 				0189588B2C69B5AF001C97B8 /* PTMineNcModel.m in Sources */,
 				1B0B74912C817C2000D52A32 /* HXFullScreenCameraPlayView.m in Sources */,
 				1B0B74512C817C2000D52A32 /* UIButton+HXExtension.m in Sources */,
 				1BB2E3FA2C7703830049D8DC /* UIImageView+BRAdd.m in Sources */,
 				010D9A902C5DE56800116246 /* PTHomeRidingLanternCell.m in Sources */,
 				1BB2E35E2C75E41E0049D8DC /* PTContactVerifyVC.m in Sources */,
-				1BB2E3A72C75EE850049D8DC /* PTAuthErrorLiveService.m in Sources */,
 				1B1B773F2C7B93A6002C8E23 /* PTBankWalletCell.m in Sources */,
 				010D9A7C2C5B757A00116246 /* PTHomeViewModel.m in Sources */,
 				1B0B74652C817C2000D52A32 /* HXPhotoEditGraffitiColorModel.m in Sources */,
@@ -2230,7 +2134,6 @@
 				1B0B748A2C817C2000D52A32 /* HXPhotoViewTransition.m in Sources */,
 				1B0B74932C817C2000D52A32 /* HXPhotoCustomNavigationBar.m in Sources */,
 				1BB2E3F92C7703830049D8DC /* UIImage+BRAdd.m in Sources */,
-				1BB2E3982C75EE290049D8DC /* PTInitLiveService.m in Sources */,
 				01BD0E032C57881500998706 /* PTPhoneInputView.m in Sources */,
 				1B0B74592C817C2000D52A32 /* HXAlbumListViewController.m in Sources */,
 				018958AA2C6B5182001C97B8 /* PTAuthentRouterManager.m in Sources */,
@@ -2241,10 +2144,8 @@
 				1B1B77062C7877A6002C8E23 /* PTVerifyEmailAlertListCell.m in Sources */,
 				01813C702C66057500D317F4 /* PTMineViewModel.m in Sources */,
 				1B0B74892C817C2000D52A32 /* HXPhotoViewPresentTransition.m in Sources */,
-				1BB2E3742C75E6910049D8DC /* PTBasicVerifyService.m in Sources */,
 				1B0B74812C817C2000D52A32 /* HXAlbumModel.m in Sources */,
 				1BB2E3F02C7703830049D8DC /* NSDictionary+BRAdd.m in Sources */,
-				1B0B73762C7F68C800D52A32 /* PTOrderAPI.m in Sources */,
 				1B0B746D2C817C2000D52A32 /* HXPhotoEditGraffitiColorSizeView.m in Sources */,
 				1BB2E3812C75E93B0049D8DC /* PTContactVerifyModel.m in Sources */,
 				1B0B748B2C817C2000D52A32 /* HXAlbumlistView.m in Sources */,
@@ -2258,26 +2159,20 @@
 				1BB2E3F32C7703830049D8DC /* NSString+BRAdd.m in Sources */,
 				018958B92C6B7EB2001C97B8 /* PTAutheticationViewModel.m in Sources */,
 				1B0B73792C7F6ADE00D52A32 /* PTOrderModel.m in Sources */,
-				1BB2E39B2C75EE380049D8DC /* PTLimitLiveService.m in Sources */,
-				1BB2E3A12C75EE5C0049D8DC /* PTDetectionLiveService.m in Sources */,
 				1BB2E3F82C7703830049D8DC /* UIControl+BRAdd.m in Sources */,
 				1BB2E3AE2C75EF620049D8DC /* PTBankModel.m in Sources */,
 				1B0B745A2C817C2000D52A32 /* HXCustomCameraController.m in Sources */,
-				1BB2E37B2C75E85D0049D8DC /* PTGetContactService.m in Sources */,
 				1B0B74952C817C2000D52A32 /* HXPhotoPreviewBottomView.m in Sources */,
 				1B0B74902C817C2000D52A32 /* HXCustomPreviewView.m in Sources */,
 				1B0B74772C817C2000D52A32 /* HXPhotoEditSplashMaskLayer.m in Sources */,
 				1B0B744C2C817C2000D52A32 /* NSBundle+HXPhotoPicker.m in Sources */,
 				019649832C45334E00553264 /* PTDeviceInfo.m in Sources */,
 				1B0B749A2C817C2000D52A32 /* HXPhotoSubViewCell.m in Sources */,
-				01E6733E2C5A4A37003DE81C /* PTLoginGetSMSCodeService.m in Sources */,
-				018958B52C6B7DD6001C97B8 /* PTAuthenTicationSerive.m in Sources */,
 				0189588E2C69B9CF001C97B8 /* PTMineModel.m in Sources */,
 				1B0B73672C7F0D8C00D52A32 /* PTOrderListVC.m in Sources */,
 				1B0B74982C817C2000D52A32 /* HXPhotoPreviewVideoViewCell.m in Sources */,
 				01BD0E082C59E9D700998706 /* PTLoginCodeController.m in Sources */,
 				1B0B749F2C817C2000D52A32 /* HXPreviewLivePhotoView.m in Sources */,
-				1BB2E3A42C75EE6A0049D8DC /* PTSaveLiveService.m in Sources */,
 				1B0B746E2C817C2000D52A32 /* HXPhotoEditGraffitiColorView.m in Sources */,
 				1B0B747A2C817C2000D52A32 /* HXPhotoEditStickerItemContentView.m in Sources */,
 				1B1B76FE2C785E4D002C8E23 /* PtVerifyCountDown.m in Sources */,
@@ -2289,7 +2184,6 @@
 				1BB2E3FF2C7703830049D8DC /* UIView+BRAdd.m in Sources */,
 				018958A12C6AFE06001C97B8 /* PTSettingLogoutView.m in Sources */,
 				010D9A942C5DE74E00116246 /* UUMarqueeView.m in Sources */,
-				1BB2E3B72C75F14F0049D8DC /* PTSaveIdentifyService.m in Sources */,
 				1B0B74782C817C2000D52A32 /* HXPhotoEditSplashView.m in Sources */,
 				1B0B73702C7F0DCD00D52A32 /* PTOrderNoDaraView.m in Sources */,
 				1B0B73642C7F0AAB00D52A32 /* PTOrderViewController.m in Sources */,
@@ -2307,11 +2201,9 @@
 				1B0B745E2C817C2000D52A32 /* HXPhotoEditViewController.m in Sources */,
 				1B0B74582C817C2000D52A32 /* UIViewController+HXExtension.m in Sources */,
 				1B5F86172C85CFFC00F9EFDA /* PTHomeRepayModel.m in Sources */,
-				1BB2E37E2C75E8690049D8DC /* PTSaveContactService.m in Sources */,
 				1B0B74832C817C2000D52A32 /* HXPhotoModel.m in Sources */,
 				1B0B737F2C80461400D52A32 /* PTHomePopView.m in Sources */,
 				0196498E2C45379200553264 /* PTCacheManager.m in Sources */,
-				1BB2E3BD2C76CDCB0049D8DC /* PTBaseTableViewCell.m in Sources */,
 				1BB2E3F12C7703830049D8DC /* NSMutableAttributedString+BRAdd.m in Sources */,
 				1B1B76FB2C7840B0002C8E23 /* PTVerifyCountDownView.m in Sources */,
 				1B0B74722C817C2000D52A32 /* HXPhotoEditGridView.m in Sources */,
@@ -2325,7 +2217,6 @@
 				1B0B748E2C817C2000D52A32 /* HXCollectionView.m in Sources */,
 				1B1B77422C7B93D4002C8E23 /* PTBankConfirmView.m in Sources */,
 				1B0B74A12C817C2000D52A32 /* HXAssetManager.m in Sources */,
-				018958A42C6B0CA6001C97B8 /* PTSettLogoutService.m in Sources */,
 				010D9AA62C5E2F3A00116246 /* PTHomeProductListCell.m in Sources */,
 				1B1B77272C7AD819002C8E23 /* PTIdentifyVerifySelectCardCell.m in Sources */,
 				0196499E2C4672F200553264 /* PTTabBarViewController.m in Sources */,
@@ -2337,11 +2228,9 @@
 				01A921422C5202CF001E9B70 /* PTHomeController.m in Sources */,
 				1B0B74732C817C2000D52A32 /* HXPhotoEditImageView.m in Sources */,
 				1B0B74882C817C2000D52A32 /* HXPhotoPersentInteractiveTransition.m in Sources */,
-				1B0B73822C8046CC00D52A32 /* PTHomePopApi.m in Sources */,
 				1B0B74A32C817C2000D52A32 /* HXPhotoConfiguration.m in Sources */,
 				1BB2E3FD2C7703830049D8DC /* UITextField+VerCodeTF.m in Sources */,
 				019649912C46598900553264 /* PTBaseModel.m in Sources */,
-				1B1B770C2C78A36F002C8E23 /* PTHomeGCePushService.m in Sources */,
 				0196497D2C45225700553264 /* PTBaseRequest.m in Sources */,
 				1BB2E3F72C7703830049D8DC /* UIColor+BRAdd.m in Sources */,
 				010D9A6F2C5B6FB700116246 /* PTHomeIetenNcModel.m in Sources */,
@@ -2354,28 +2243,20 @@
 				1B0B74922C817C2000D52A32 /* HXPhotoBottomSelectView.m in Sources */,
 				018958922C69E667001C97B8 /* PTMineHeaderView.m in Sources */,
 				1B0B74502C817C2000D52A32 /* PHAsset+HXExtension.m in Sources */,
-				1BB2E3772C75E7300049D8DC /* PTSaveBasicVerifyService.m in Sources */,
-				1BB2E3882C75EAFA0049D8DC /* PTGetIdentifyService.m in Sources */,
 				1B1B77182C79DFA2002C8E23 /* PTContactVerifyPresenter.m in Sources */,
 				1B0B74A52C817C2000D52A32 /* HXPhotoTools.m in Sources */,
 				018958A72C6B3796001C97B8 /* PTAuthPermissionAlertView.m in Sources */,
-				018958AD2C6B54BD001C97B8 /* PTHomeGceApplyService.m in Sources */,
-				010D9A642C5A60F900116246 /* PTLoginService.m in Sources */,
 				1BB2E3642C75E4460049D8DC /* PTLiveVerifyVC.m in Sources */,
 				017BA3852C4E39A10012DC1E /* PTWebViewController.m in Sources */,
 				010D9A9A2C5E0FB000116246 /* PTHomeSmallCardCell.m in Sources */,
 				1B0B74A02C817C2000D52A32 /* HXPreviewVideoView.m in Sources */,
 				1B1B773C2C7B9391002C8E23 /* PTBankBankView.m in Sources */,
-				018CC9012C4A527E00077498 /* PTDeviceService.m in Sources */,
-				01958F5B2C81B1350042C607 /* PTUploadAdidService.m in Sources */,
 				0196497A2C451E6200553264 /* PTTools.m in Sources */,
 				1B0B74682C817C2000D52A32 /* HXPhotoEditChartletContentViewCell.m in Sources */,
 				1B0B74752C817C2000D52A32 /* HXPhotoEditMosaicView.m in Sources */,
 				010D9A8A2C5CF71600116246 /* PTHomeBrandCell.m in Sources */,
 				1B1B77392C7B9384002C8E23 /* PTBankWalletView.m in Sources */,
-				0136CCF12C410A0100D787BE /* AppDelegate.m in Sources */,
 				019649802C4524A000553264 /* PTRequestUrlArgumentsFilter.m in Sources */,
-				0136CD022C410A0200D787BE /* main.m in Sources */,
 				018958B12C6B6E25001C97B8 /* PTAuthenticationController.m in Sources */,
 				1B0B74532C817C2000D52A32 /* UIFont+HXExtension.m in Sources */,
 				1BB2E4052C7704EE0049D8DC /* PTVerifySelectDateCell.m in Sources */,
@@ -2384,8 +2265,13 @@
 				1B1B77362C7B934D002C8E23 /* PTBankVerifyView.m in Sources */,
 				0150E21A2C6CDBA4007CC7E2 /* PTAuthenticationHeaderView.m in Sources */,
 				1B0B74742C817C2000D52A32 /* HXPhotoEditingView.m in Sources */,
-				1B1B770F2C78A431002C8E23 /* PTHomeGCeDetailService.m in Sources */,
 				1B0B74A42C817C2000D52A32 /* HXPhotoManager.m in Sources */,
+				A6774D7A2EBD3968238F323B /* AppDelegate.swift in Sources */,
+				181EC115E019D22429C24E3E /* ViewController.swift in Sources */,
+				46968A84AFF79BC4BEE6A3A6 /* PTLanuchServices.swift in Sources */,
+				396B7A4D3FB418C189981EFC /* PTServiceRequests.swift in Sources */,
+				95967962E084159BB55259FD /* PTUploadIDImageService.swift in Sources */,
+				EEF0F6AEDA02F2863B351460 /* PTBaseSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2568,7 +2454,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PTApp/PTApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2616,7 +2502,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PTApp/PTApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
