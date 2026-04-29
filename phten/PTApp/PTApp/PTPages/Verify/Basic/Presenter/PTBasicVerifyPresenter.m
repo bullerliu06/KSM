@@ -9,7 +9,7 @@
 #import "PTBasicVerifyModel.h"
 #import "PTBasicVerifyService.h"
 #import "PTSaveBasicVerifyService.h"
-#import "PTHomeGCePushService.h"
+#import "PTHomeKit.h"
 @implementation PTBasicVerifyPresenter
 - (void)pt_sendGetBasicRequestWithProduct_id:(NSString *)product_id
 {

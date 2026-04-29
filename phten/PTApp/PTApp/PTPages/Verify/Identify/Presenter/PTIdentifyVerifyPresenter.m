@@ -10,7 +10,7 @@
 #import "PTUploadIDImageService.h"
 #import "PTSaveIdentifyService.h"
 #import "PTIdentifyModel.h"
-#import "PTHomeGCePushService.h"
+#import "PTHomeKit.h"
 #import "UIImage+HXExtension.h"
 @implementation PTIdentifyVerifyPresenter
 - (void)pt_sendGetIdentifyRequestWithProductId:(NSString *)product_id

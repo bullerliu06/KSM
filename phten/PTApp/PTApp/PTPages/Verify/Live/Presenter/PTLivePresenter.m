@@ -13,7 +13,7 @@
 #import "PTSaveLiveService.h"
 #import "PTAuthErrorLiveService.h"
 #import "PTLiveVerifyModel.h"
-#import "PTHomeGCePushService.h"
+#import "PTHomeKit.h"
 @implementation PTLivePresenter
 
 - (void)pt_sendGetLiveRequestWithProductId:(NSString *)product_id

@@ -8,7 +8,7 @@
 #import "PTContactVerifyPresenter.h"
 #import "PTGetContactService.h"
 #import "PTSaveContactService.h"
-#import "PTHomeGCePushService.h"
+#import "PTHomeKit.h"
 #import "PTContactVerifyModel.h"
 @implementation PTContactVerifyPresenter
 - (void)sendGetContactRequest:(NSString *)product_id

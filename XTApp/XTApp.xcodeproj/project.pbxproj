@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		E10B20012F6F000100000001 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B20002F6F000100000001 /* NetworkService.swift */; };
 		E10B20032F6F000100000001 /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B20022F6F000100000001 /* AppAPI.swift */; };
+		E10B50012F72000100000001 /* XTFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B50002F72000100000001 /* XTFirstVC.swift */; };
+		E10B50032F72000100000001 /* XTFirstCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B50022F72000100000001 /* XTFirstCards.swift */; };
+		E10B50052F72000100000001 /* XTFirstSmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B50042F72000100000001 /* XTFirstSmallCell.swift */; };
+		E10B50072F72000100000001 /* XTMarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B50062F72000100000001 /* XTMarqueeView.swift */; };
 		E10B40012F71000200000001 /* XTLoginCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B40002F71000200000001 /* XTLoginCodeVC.swift */; };
 		E10B40032F71000200000001 /* XTLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B40022F71000200000001 /* XTLoginVC.swift */; };
 		E10B30012F71000100000001 /* XTMyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B30002F71000100000001 /* XTMyVC.swift */; };
@@ -56,7 +60,7 @@
 		B3512EE6B48BD3CA3CF63C96 /* XTAuthenticationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31067F731069875A7321B8F9 /* XTAuthenticationModels.swift */; };
 		B52F5D8ECC5F77F6B3694B31 /* XTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2352C6DA8712C718FE827559 /* XTDevice.swift */; };
 		BB5DAFC2BA09903EDE344FD5 /* NSString+XTCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD46FE64F0A13F377BBF430 /* NSString+XTCategory.swift */; };
-		C09ADABF1FEE1201163E3E93 /* XTFirstControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD61120E3AC0C7FC23D829 /* XTFirstControllers.swift */; };
+		C09ADABF1FEE1201163E3E93 /* XTFirstShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD61120E3AC0C7FC23D829 /* XTFirstShared.swift */; };
 		C5E4B0FF86513A93E941F7AC /* UIView+XTPositioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E37414149BA53236C9C86D /* UIView+XTPositioning.swift */; };
 		C7A125E75D06DAF502FAAFC4 /* XTLoginFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46CB4249DE81ACB694D0943 /* XTLoginFlowCoordinator.swift */; };
 		CF47373F78893B6920DDC777 /* XTBasicMyCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A0FE1DB1CC5CD032C212B /* XTBasicMyCells.swift */; };
@@ -266,6 +270,10 @@
 		E10B10042F6E000100000001 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		E10B40002F71000200000001 /* XTLoginCodeVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTLoginCodeVC.swift; sourceTree = "<group>"; };
 		E10B40022F71000200000001 /* XTLoginVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTLoginVC.swift; sourceTree = "<group>"; };
+		E10B50002F72000100000001 /* XTFirstVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTFirstVC.swift; sourceTree = "<group>"; };
+		E10B50022F72000100000001 /* XTFirstCards.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTFirstCards.swift; sourceTree = "<group>"; };
+		E10B50042F72000100000001 /* XTFirstSmallCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTFirstSmallCell.swift; sourceTree = "<group>"; };
+		E10B50062F72000100000001 /* XTMarqueeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTMarqueeView.swift; sourceTree = "<group>"; };
 		E10B30002F71000100000001 /* XTMyVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTMyVC.swift; sourceTree = "<group>"; };
 		E10B30022F71000100000001 /* XTSetVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTSetVC.swift; sourceTree = "<group>"; };
 		E10B30042F71000100000001 /* XTOrderVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTOrderVC.swift; sourceTree = "<group>"; };
@@ -276,7 +284,7 @@
 		E10B00102F6D000100000001 /* XTFirstModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTFirstModels.swift; sourceTree = "<group>"; };
 		E10B00122F6D000100000001 /* XTMyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTMyModels.swift; sourceTree = "<group>"; };
 		E28B5A5929D21A31BB39D241 /* UIView+XTToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+XTToast.swift"; sourceTree = "<group>"; };
-		E4AD61120E3AC0C7FC23D829 /* XTFirstControllers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTFirstControllers.swift; sourceTree = "<group>"; };
+		E4AD61120E3AC0C7FC23D829 /* XTFirstShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTFirstShared.swift; sourceTree = "<group>"; };
 		E98AB9B7494BD1CE7C103007 /* XTNetworkApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTNetworkApis.swift; sourceTree = "<group>"; };
 		EFE76A51BC1B7F05C73EA6AE /* XTRequestCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTRequestCenter.swift; sourceTree = "<group>"; };
 		F27580AB02977728C99ECD10 /* NSDate+XTCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSDate+XTCategory.swift"; sourceTree = "<group>"; };
@@ -420,7 +428,11 @@
 				16501D8A2C3FE40B00F09727 /* XTModel */,
 				16501D862C3FE32600F09727 /* XTApi */,
 				1627AF352C3F78510059AC1E /* XTFirstVC.h */,
-				E4AD61120E3AC0C7FC23D829 /* XTFirstControllers.swift */,
+				E4AD61120E3AC0C7FC23D829 /* XTFirstShared.swift */,
+				E10B50002F72000100000001 /* XTFirstVC.swift */,
+				E10B50022F72000100000001 /* XTFirstCards.swift */,
+				E10B50042F72000100000001 /* XTFirstSmallCell.swift */,
+				E10B50062F72000100000001 /* XTMarqueeView.swift */,
 			);
 			path = XTFirst;
 			sourceTree = "<group>";
@@ -938,7 +950,11 @@
 				4CD0BBD4B7665F677A291058 /* XTVerifyBankVC.swift in Sources */,
 				FFFD2A5599497986FD022EBC /* XTVerifyShared.swift in Sources */,
 				612A59E287CBF53D393DCF97 /* XTAuthenticationViews.swift in Sources */,
-				C09ADABF1FEE1201163E3E93 /* XTFirstControllers.swift in Sources */,
+				C09ADABF1FEE1201163E3E93 /* XTFirstShared.swift in Sources */,
+				E10B50012F72000100000001 /* XTFirstVC.swift in Sources */,
+				E10B50032F72000100000001 /* XTFirstCards.swift in Sources */,
+				E10B50052F72000100000001 /* XTFirstSmallCell.swift in Sources */,
+				E10B50072F72000100000001 /* XTMarqueeView.swift in Sources */,
 				6C60B542342EC1A115AA4B23 /* XTMyShared.swift in Sources */,
 				E10B30012F71000100000001 /* XTMyVC.swift in Sources */,
 				E10B30032F71000100000001 /* XTSetVC.swift in Sources */,

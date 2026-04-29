@@ -6,13 +6,12 @@
 //
 
 #import "PTAuthentRouterManager.h"
-#import "PTHomeGceApplyService.h"
+#import "PTHomeKit.h"
 #import "PTDeviceService.h"
 #import "PTWebViewController.h"
 
 #import "PTAuthenticationController.h"
 #import "PTBasicVerifyVC.h"
-#import "PTHomeApplyModel.h"
 #import "PTBasicVerifyVC.h"
 #import "PTContactVerifyVC.h"
 #import "PTIdentifyVerifyVC.h"

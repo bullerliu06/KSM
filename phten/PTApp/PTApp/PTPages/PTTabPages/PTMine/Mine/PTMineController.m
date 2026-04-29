@@ -8,7 +8,7 @@
 #import "PTMineController.h"
 #import "PTMineViewModel.h"
 #import "PTMineModel.h"
-#import "PTHomeBaseModel.h"
+#import "PTHomeKit.h"
 
 #import "PTMineHeaderView.h"
 #import "PTMineItemCell.h"

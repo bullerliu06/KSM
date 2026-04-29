@@ -8,7 +8,7 @@
 #import "PTAutheticationViewModel.h"
 #import "PTAuthenTicationSerive.h"
 #import "PTAuthenticationModel.h"
-#import "PTHomeGCePushService.h"
+#import "PTHomeKit.h"
 @implementation PTAutheticationViewModel
 
 -(void)getAutheticationdeatalRetengnNc:(NSString*)retengnNc finish:(void (^)(PTAuthenticationModel *model))successBlock failture:(void (^)(void))failtureBlock

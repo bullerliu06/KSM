@@ -28,7 +28,7 @@
 #import "PTHomeProductListCell.h"
 #import "PTHomeProductModel.h"
 #import "PTWebViewController.h"
-#import "PTAuthPermissionAlertView.h"
+#import "PTHomeView/PTAuthPermissionAlertView.h"
 
 #import <CoreLocation/CoreLocation.h>
 #import "PTAuthentRouterManager.h"

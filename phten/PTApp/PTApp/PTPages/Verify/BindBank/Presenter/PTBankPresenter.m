@@ -9,7 +9,7 @@
 #import "PTGetBankService.h"
 #import "PTSaveBankService.h"
 #import "PTBankModel.h"
-#import "PTHomeGCePushService.h"
+#import "PTHomeKit.h"
 @implementation PTBankPresenter
 - (void)pt_sendGetBankRequest:(NSString *)product_id
 {

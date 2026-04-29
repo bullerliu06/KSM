@@ -5,7 +5,7 @@
 //  Created by 刘巍 on 2024/8/13.
 //
 
-#import "PTHomeBaseModel.h"
+#import "PTHomeKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface PTAuthenticationItemModel : PTHomeBaseModel

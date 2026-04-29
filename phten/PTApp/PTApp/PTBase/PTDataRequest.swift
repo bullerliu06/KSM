@@ -7,6 +7,13 @@ import AFNetworking
 import UIKit
 import YTKNetwork
 
+private let PTDefaultRequestTimeout: TimeInterval = 30
+private let PTDefaultUploadMimeType = "image/jpeg"
+private let PTDefaultUploadMaxKilobytes = 1024
+private let PTInitialJPEGQuality: CGFloat = 0.9
+private let PTMinimumJPEGQuality: CGFloat = 0.1
+private let PTJPEGQualityStep: CGFloat = 0.1
+
 enum PTAPIEndpoint {
     static let googleMarket = "tencr/market"
     static let uploadAdid = "tencr/aio"
@@ -83,7 +90,7 @@ enum PTRequestParameters {
     }
 }
 
-enum PTRequestValue {
+private enum PTRequestValue {
     static let emptyDictionary: NSDictionary = [:]
 
     static func string(_ value: String?) -> String {
@@ -149,7 +156,7 @@ class PTDictionaryRequest: PTBaseRequest {
     }
 
     override func requestTimeoutInterval() -> TimeInterval {
-        30
+        PTDefaultRequestTimeout
     }
 
     override func requestMethod() -> YTKRequestMethod {
@@ -177,8 +184,8 @@ class PTImageUploadRequest: PTBaseRequest {
         path: String,
         fileFieldName: String,
         fileName: String,
-        mimeType: String = "image/jpeg",
-        maxKilobytes: Int = 1024,
+        mimeType: String = PTDefaultUploadMimeType,
+        maxKilobytes: Int = PTDefaultUploadMaxKilobytes,
         showLoading: Bool = false
     ) {
         self.image = image
@@ -225,12 +232,11 @@ class PTImageUploadRequest: PTBaseRequest {
 
     private static func jpegData(for image: UIImage, maxKilobytes: Int) -> Data? {
         let maxBytes = maxKilobytes * 1024
-        var quality: CGFloat = 0.9
-        let minQuality: CGFloat = 0.1
+        var quality = PTInitialJPEGQuality
         var data = image.jpegData(compressionQuality: quality)
 
-        while let currentData = data, currentData.count > maxBytes, quality > minQuality {
-            quality -= 0.1
+        while let currentData = data, currentData.count > maxBytes, quality > PTMinimumJPEGQuality {
+            quality -= PTJPEGQualityStep
             data = image.jpegData(compressionQuality: quality)
         }
 

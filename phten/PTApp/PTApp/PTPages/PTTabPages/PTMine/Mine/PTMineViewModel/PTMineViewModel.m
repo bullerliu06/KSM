@@ -7,7 +7,7 @@
 
 #import "PTMineViewModel.h"
 #import "PTMineIndexService.h"
-#import "PTHomeBaseModel.h"
+#import "PTHomeKit.h"
 #import "PTMineModel.h"
 
 @interface PTMineViewModel()
