@@ -45,9 +45,11 @@
 		539310ABFF4DC1E702A33916 /* XTBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900B07EF3A2D51F5ED6BBBFB /* XTBaseVC.swift */; };
 		5E644A290552F1A48F53057E /* XTVerifySmallViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED69F4D3D1DCDD338B329 /* XTVerifySmallViews.swift */; };
 		5F015BFBB7153CA86E66D289 /* UIView+XTCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FE7AD1E44B49BEC5016C9 /* UIView+XTCategory.swift */; };
-		612A59E287CBF53D393DCF97 /* XTAuthenticationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA97E3A5F21EE75966DF2D /* XTAuthenticationViews.swift */; };
+		612A59E287CBF53D393DCF97 /* XTAuthenticationSelectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA97E3A5F21EE75966DF2D /* XTAuthenticationSelectViews.swift */; };
 		6BABF600F33A45D3BB0825BE /* XTNetworkApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AB9B7494BD1CE7C103007 /* XTNetworkApis.swift */; };
 		6C60B542342EC1A115AA4B23 /* XTMyShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A64E150944AB0566D3E07 /* XTMyShared.swift */; };
+		E10B60012F73000100000001 /* XTAuthenticationContactViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B60002F73000100000001 /* XTAuthenticationContactViews.swift */; };
+		E10B60032F73000100000001 /* XTAuthenticationBankViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B60022F73000100000001 /* XTAuthenticationBankViews.swift */; };
 		7E1B039B7A96044C59618224 /* XTWalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E8445A27E0ADA7551331EC /* XTWalletCell.swift */; };
 		8238B6100A255C1224806EDE /* XTNavigationTabControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CE8C59948C5236B725DC1 /* XTNavigationTabControllers.swift */; };
 		83DAD43A9BE1BA0980D4C87A /* XTFirstFootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A707942F8E3E809CC6717 /* XTFirstFootCell.swift */; };
@@ -235,7 +237,9 @@
 		16FB321A2C9057D300714BB1 /* XTAuthErrApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTAuthErrApi.h; sourceTree = "<group>"; };
 		17D5BA1BADA8B8B8A4BF75C9 /* XTLocationManger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTLocationManger.swift; sourceTree = "<group>"; };
 		1D8C9787443F6C50C51DCCE3 /* Pods-XTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTApp.release.xcconfig"; path = "Target Support Files/Pods-XTApp/Pods-XTApp.release.xcconfig"; sourceTree = "<group>"; };
-		20FA97E3A5F21EE75966DF2D /* XTAuthenticationViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTAuthenticationViews.swift; sourceTree = "<group>"; };
+		20FA97E3A5F21EE75966DF2D /* XTAuthenticationSelectViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTAuthenticationSelectViews.swift; sourceTree = "<group>"; };
+		E10B60002F73000100000001 /* XTAuthenticationContactViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTAuthenticationContactViews.swift; sourceTree = "<group>"; };
+		E10B60022F73000100000001 /* XTAuthenticationBankViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTAuthenticationBankViews.swift; sourceTree = "<group>"; };
 		2352C6DA8712C718FE827559 /* XTDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTDevice.swift; sourceTree = "<group>"; };
 		31067F731069875A7321B8F9 /* XTAuthenticationModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTAuthenticationModels.swift; sourceTree = "<group>"; };
 		37EBCF9C892424916AA5E2D6 /* XTMyViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTMyViewModel.swift; sourceTree = "<group>"; };
@@ -662,7 +666,9 @@
 				3B7D84EBF9514842B1FDAA9E /* XTSegControls.swift */,
 				6CBED69F4D3D1DCDD338B329 /* XTVerifySmallViews.swift */,
 				F9E8445A27E0ADA7551331EC /* XTWalletCell.swift */,
-				20FA97E3A5F21EE75966DF2D /* XTAuthenticationViews.swift */,
+				20FA97E3A5F21EE75966DF2D /* XTAuthenticationSelectViews.swift */,
+				E10B60002F73000100000001 /* XTAuthenticationContactViews.swift */,
+				E10B60022F73000100000001 /* XTAuthenticationBankViews.swift */,
 			);
 			path = XTView;
 			sourceTree = "<group>";
@@ -949,7 +955,9 @@
 				4CD0BBD3B7665F677A291058 /* XTVerifyFaceVC.swift in Sources */,
 				4CD0BBD4B7665F677A291058 /* XTVerifyBankVC.swift in Sources */,
 				FFFD2A5599497986FD022EBC /* XTVerifyShared.swift in Sources */,
-				612A59E287CBF53D393DCF97 /* XTAuthenticationViews.swift in Sources */,
+				612A59E287CBF53D393DCF97 /* XTAuthenticationSelectViews.swift in Sources */,
+				E10B60012F73000100000001 /* XTAuthenticationContactViews.swift in Sources */,
+				E10B60032F73000100000001 /* XTAuthenticationBankViews.swift in Sources */,
 				C09ADABF1FEE1201163E3E93 /* XTFirstShared.swift in Sources */,
 				E10B50012F72000100000001 /* XTFirstVC.swift in Sources */,
 				E10B50032F72000100000001 /* XTFirstCards.swift in Sources */,

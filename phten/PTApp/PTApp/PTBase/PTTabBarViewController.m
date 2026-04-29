@@ -7,7 +7,7 @@
 
 #import "PTTabBarViewController.h"
 #import "PTHomeKit.h"
-#import "PTMineController.h"
+#import "PTMineKit.h"
 
 @interface PTTabBarViewController ()
 
