@@ -8,6 +8,17 @@
 import Foundation
 import UIKit
 
+protocol SessionManaging: AnyObject {
+    var currentUser: UserModel? { get }
+    var isLoggedIn: Bool { get }
+    func saveUser(from dictionary: [String: Any])
+    func logout()
+}
+
+extension Notification.Name {
+    static let userSessionDidLogout = Notification.Name("XTUserSessionDidLogoutNotification")
+}
+
 // MARK: - User Model
 
 struct UserModel: Codable {
@@ -51,9 +62,20 @@ struct UserModel: Codable {
     }
 }
 
+extension UserModel {
+    var xt_isOld: String? { isOld }
+    var xt_smsMaxId: String? { smsMaxId }
+    var xt_userId: String? { userId }
+    var xt_phone: String? { phone }
+    var xt_realname: String? { realName }
+    var xt_token: String? { token }
+    var xt_userSessionid: String? { sessionId }
+    var xt_is_aduit: Bool { isAudit }
+}
+
 // MARK: - UserSession Manager
 
-final class UserSession {
+final class UserSession: SessionManaging {
     static let shared = UserSession()
 
     private let userFilePath: String = AppConstants.documentPath + "/XT_USER"
@@ -90,9 +112,7 @@ final class UserSession {
     func logout() {
         try? FileManager.default.removeItem(atPath: userFilePath)
         cachedUser = nil
-        DispatchQueue.main.async {
-            XT_AppDelegate?.xt_loginView()
-        }
+        NotificationCenter.default.post(name: .userSessionDidLogout, object: self)
     }
 
     // MARK: - Private
@@ -109,3 +129,26 @@ final class UserSession {
 
 typealias XTUserModel = UserModel
 typealias XTUserManger = UserSession
+
+extension UserSession {
+    static func xt_share() -> UserSession {
+        shared
+    }
+
+    static func xt_isLogin() -> Bool {
+        shared.isLoggedIn
+    }
+
+    var xt_user: XTUserModel? {
+        get { currentUser }
+        set { currentUser = newValue }
+    }
+
+    func xt_saveUserDic(_ dictionary: NSDictionary) {
+        saveUser(from: dictionary as? [String: Any] ?? [:])
+    }
+
+    func xt_loginOut() {
+        logout()
+    }
+}

@@ -75,7 +75,7 @@ class XTBaseVC: UIViewController {
         super.viewWillAppear(animated)
         let hiddenTypes: [XTBaseVC.Type] = [XTHtmlVC.self, XTLoginCodeVC.self]
         let shouldHide = hiddenTypes.contains { isKind(of: $0) }
-        XTAssistiveView.shared.isHidden = shouldHide
+        XTAssistiveView.xt_share().isHidden = shouldHide
     }
 
     override func viewDidLoad() {
@@ -112,19 +112,5 @@ class XTBaseVC: UIViewController {
             titleLabel.centerYAnchor.constraint(equalTo: xt_bkBtn.centerYAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: xt_navView.centerXAnchor)
         ])
-    }
-}
-
-// MARK: - Present helper
-
-extension XTBaseVC {
-    func xt_presentViewController(
-        _ viewController: UIViewController,
-        animated: Bool,
-        completion: (() -> Void)?,
-        modalPresentationStyle: UIModalPresentationStyle
-    ) {
-        viewController.modalPresentationStyle = modalPresentationStyle
-        present(viewController, animated: animated, completion: completion)
     }
 }

@@ -29,134 +29,215 @@ final class VerifyViewModel {
         return try JSONDecoder().decode([T].self, from: data)
     }
 
-    // MARK: - Detail
-
-    struct DetailResult {
-        let code: String?
-        let orderId: String?
-    }
-
-    func fetchDetail(productId: String) async throws -> DetailResult {
-        let (data, _) = try await network.detail(productId: productId)
-        guard let data,
-              let listJSON = data["atessixiaNc"] as? [Any],
-              let loanInfo = data["leonsixishNc"] as? [String: Any] else {
-            throw NetworkError.noData
-        }
-        list = try decodeArray(VerifyListModel.self, from: listJSON)
-        let topInfo = data["heissixtopNc"] as? [String: Any]
-        let code = topInfo.map { XT_Object_To_Stirng($0["excuse"]) }
-        let orderId = XT_Object_To_Stirng(loanInfo["cokesixtNc"])
-        return DetailResult(code: code, orderId: orderId)
-    }
-
-    // MARK: - Person (基本信息)
-
-    func fetchPerson(productId: String) async throws {
-        let (data, _) = try await network.person(productId: productId)
-        if let data {
-            baseModel = try decode(VerifyBaseModel.self, from: data)
-        }
-    }
-
-    func submitPerson(params: [String: Any]) async throws -> String? {
-        let (data, _) = try await network.personNext(params: params)
-        return nextCode(from: data)
-    }
-
-    // MARK: - Contact
-
-    func fetchContact(productId: String) async throws {
-        let (data, _) = try await network.contact(productId: productId)
-        if let data {
-            contactModel = try decode(VerifyContactModel.self, from: data)
-        }
-    }
-
-    func submitContact(params: [String: Any]) async throws -> String? {
-        let (data, _) = try await network.contactNext(params: params)
-        return nextCode(from: data)
-    }
-
-    // MARK: - Photo / OCR
-
-    func fetchPhoto(productId: String) async throws {
-        let (data, _) = try await network.photo(productId: productId)
-        if let data {
-            ocrModel = try decode(OcrModel.self, from: data)
-        }
-    }
-
-    func submitPhoto(params: [String: Any]) async throws -> String? {
-        let (data, _) = try await network.photoNext(params: params)
-        return nextCode(from: data)
-    }
-
-    func uploadOCR(filePath: String, typeId: String) async throws -> (data: [String: Any]?, message: String?) {
-        try await network.uploadOCR(filePath: filePath, typeId: typeId)
-    }
-
-    // MARK: - Face Liveness
-
-    func fetchLicense() async throws {
-        _ = try await network.license()
-    }
-
-    func fetchFaceModel(productId: String) async throws {
-        let (data, _) = try await network.auth(productId: productId)
-        if let data {
-            faceModel = try decode(FaceModel.self, from: data)
-        }
-    }
-
-    func submitDetection(productId: String, livenessId: String) async throws -> String? {
-        let (data, _) = try await network.detection(productId: productId, livenessId: livenessId)
-        return data.map { XT_Object_To_Stirng($0["relosixomNc"]) }
-    }
-
-    func reportAuthError(errorStr: String) async {
-        try? await network.authError(errorStr: errorStr)
-    }
-
-    // MARK: - Bank
-
-    func fetchCard(productId: String) async throws {
-        let (data, _) = try await network.card(productId: productId)
-        if let data {
-            bankModel = try decode(BankModel.self, from: data)
-        }
-    }
-
-    func fetchLimit(productId: String) async throws -> String? {
-        let (data, _) = try await network.limit(productId: productId)
-        return data.map { XT_Object_To_Stirng($0["relosixomNc"]) }
-    }
-
-    func submitCard(params: [String: Any]) async throws -> String? {
-        let (data, _) = try await network.cardNext(params: params)
-        return nextCode(from: data)
-    }
-
-    // MARK: - Push / Submit order
-
-    func push(orderId: String) async throws -> String {
-        let (data, _) = try await network.push(orderId: orderId)
-        guard let data else { throw NetworkError.noData }
-        return XT_Object_To_Stirng(data["relosixomNc"])
-    }
-
-    // MARK: - Save Auth
-
-    func saveAuth(params: [String: Any]) async throws -> String? {
-        let (data, _) = try await network.saveAuth(params: params)
-        return nextCode(from: data)
-    }
-
-    // MARK: - Private
-
     private func nextCode(from data: [String: Any]?) -> String? {
         guard let next = data?["deecsixtibleNc"] as? [String: Any] else { return nil }
         return next["excuse"] as? String
+    }
+
+    private func handleModel<T: Decodable>(
+        _ result: Result<NetworkRawResponse, NetworkError>,
+        assign: (T) -> Void,
+        success: XTBlock?,
+        failure: XTBlock?
+    ) {
+        switch result {
+        case .success(let response):
+            guard let data = response.data,
+                  let model = try? decode(T.self, from: data) else {
+                failure?()
+                return
+            }
+            assign(model)
+            success?()
+        case .failure:
+            failure?()
+        }
+    }
+
+    func xt_detail(_ productId: String, success: ((String?, String?) -> Void)?, failure: XTBlock?) {
+        network.detail(productId: productId) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                guard let data = response.data,
+                      let listJSON = data["atessixiaNc"] as? [Any],
+                      let loanInfo = data["leonsixishNc"] as? [String: Any],
+                      let decodedList = try? self.decodeArray(VerifyListModel.self, from: listJSON) else {
+                    failure?()
+                    return
+                }
+                self.list = decodedList
+                let topInfo = data["heissixtopNc"] as? [String: Any]
+                success?(topInfo.map { XT_Object_To_Stirng($0["excuse"]) }, XT_Object_To_Stirng(loanInfo["cokesixtNc"]))
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_person(_ productId: String, success: XTBlock?, failure: XTBlock?) {
+        network.person(productId: productId) { [weak self] result in
+            guard let self else { return }
+            self.handleModel(result, assign: { self.baseModel = $0 }, success: success, failure: failure)
+        }
+    }
+
+    func xt_person_next(_ params: NSDictionary, success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.personNext(params: params as? [String: Any] ?? [:]) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                success?(self.nextCode(from: response.data))
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_contact(_ productId: String, success: XTBlock?, failure: XTBlock?) {
+        network.contact(productId: productId) { [weak self] result in
+            guard let self else { return }
+            self.handleModel(result, assign: { self.contactModel = $0 }, success: success, failure: failure)
+        }
+    }
+
+    func xt_contact_next(_ params: NSDictionary, success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.contactNext(params: params as? [String: Any] ?? [:]) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                success?(self.nextCode(from: response.data))
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_photo(_ productId: String, success: XTBlock?, failure: XTBlock?) {
+        network.photo(productId: productId) { [weak self] result in
+            guard let self else { return }
+            self.handleModel(result, assign: { self.ocrModel = $0 }, success: success, failure: failure)
+        }
+    }
+
+    func xt_photo_next(_ params: NSDictionary, success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.photoNext(params: params as? [String: Any] ?? [:]) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                success?(self.nextCode(from: response.data))
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_upload_ocr_image(_ filePath: String, typeId: String, success: XTBlock?, failure: XTBlock?) {
+        network.uploadOCR(filePath: filePath, typeId: typeId) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                guard let data = response.data,
+                      let model = try? self.decode(OcrModel.self, from: data) else {
+                    failure?()
+                    return
+                }
+                self.ocrModel = model
+                success?()
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_auth(_ productId: String, success: XTBlock?, failure: XTBlock?) {
+        network.auth(productId: productId) { [weak self] result in
+            guard let self else { return }
+            self.handleModel(result, assign: { self.faceModel = $0 }, success: success, failure: failure)
+        }
+    }
+
+    func xt_limit(_ productId: String, success: XTBlock?, failure: XTBlock?) {
+        network.limit(productId: productId) { result in
+            switch result {
+            case .success:
+                success?()
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_licenseSuccess(_ success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.license { result in
+            switch result {
+            case .success(let response):
+                success?(response.data?["sdkKey"] as? String)
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_auth_err(_ errorStr: String) {
+        network.authError(errorStr: errorStr) { _ in }
+    }
+
+    func xt_detectionProductId(_ productId: String, livenessId: String, success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.detection(productId: productId, livenessId: livenessId) { result in
+            switch result {
+            case .success(let response):
+                success?(response.data.map { XT_Object_To_Stirng($0["relosixomNc"]) })
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_save_auth(_ params: NSDictionary, success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.saveAuth(params: params as? [String: Any] ?? [:]) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                success?(self.nextCode(from: response.data))
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_card(_ productId: String, success: XTBlock?, failure: XTBlock?) {
+        network.card(productId: productId) { [weak self] result in
+            guard let self else { return }
+            self.handleModel(result, assign: { self.bankModel = $0 }, success: success, failure: failure)
+        }
+    }
+
+    func xt_card_next(_ params: NSDictionary, success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.cardNext(params: params as? [String: Any] ?? [:]) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                success?(self.nextCode(from: response.data))
+            case .failure:
+                failure?()
+            }
+        }
+    }
+
+    func xt_push(_ orderId: String, success: ((String?) -> Void)?, failure: XTBlock?) {
+        network.push(orderId: orderId) { result in
+            switch result {
+            case .success(let response):
+                guard let data = response.data else {
+                    failure?()
+                    return
+                }
+                success?(XT_Object_To_Stirng(data["relosixomNc"]))
+            case .failure:
+                failure?()
+            }
+        }
     }
 }
 

@@ -5,11 +5,12 @@
 //  Created by Codex on 2026/4/26.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Note Model (selection option)
 
-struct NoteModel: Codable {
+@objcMembers
+final class NoteModel: NSObject, Codable {
     var name: String?
     var type: String?
     var icon: String?
@@ -18,6 +19,40 @@ struct NoteModel: Codable {
         case name = "uporsixnNc"
         case type = "itlisixanizeNc"
         case icon = "ieNcsix"
+    }
+
+    override init() {
+        super.init()
+    }
+
+    required init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        name = try c.decodeIfPresent(String.self, forKey: .name)
+        type = try c.decodeIfPresent(String.self, forKey: .type)
+        icon = try c.decodeIfPresent(String.self, forKey: .icon)
+        super.init()
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encodeIfPresent(name, forKey: .name)
+        try c.encodeIfPresent(type, forKey: .type)
+        try c.encodeIfPresent(icon, forKey: .icon)
+    }
+
+    var xt_name: String? {
+        get { name }
+        set { name = newValue }
+    }
+
+    var xt_type: String? {
+        get { type }
+        set { type = newValue }
+    }
+
+    var xt_icon: String? {
+        get { icon }
+        set { icon = newValue }
     }
 }
 
@@ -37,16 +72,18 @@ struct OcrNoteModel: Codable {
 
 // MARK: - List Model (form field)
 
-final class ListModel: Codable {
+@objcMembers
+final class ListModel: NSObject, Codable {
     var id: String?
     var title: String?
     var subtitle: String?
     var code: String?
     var category: String?
     var noteList: [NoteModel]?
-    var isOptional: Bool
+    var isOptional: Bool = false
     var value: String?
-    var isHiddenCell: Bool
+    var isHiddenCell: Bool = false
+    weak var cell: UITableViewCell?
 
     // Computed / transient
     var name: String?
@@ -62,6 +99,10 @@ final class ListModel: Codable {
         case isOptional = "tapasixxNc"
     }
 
+    override init() {
+        super.init()
+    }
+
     required init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         id = try c.decodeIfPresent(String.self, forKey: .id)
@@ -69,19 +110,22 @@ final class ListModel: Codable {
         subtitle = try c.decodeIfPresent(String.self, forKey: .subtitle)
         code = try c.decodeIfPresent(String.self, forKey: .code)
         category = try c.decodeIfPresent(String.self, forKey: .category)
-        noteList = try c.decodeIfPresent([NoteModel].self, forKey: .noteList)
-        value = try c.decodeIfPresent(String.self, forKey: .value)
+        let decodedNoteList = try c.decodeIfPresent([NoteModel].self, forKey: .noteList)
+        noteList = decodedNoteList
+        let decodedValue = try c.decodeIfPresent(String.self, forKey: .value)
+        value = decodedValue
         isOptional = (try? c.decode(Bool.self, forKey: .isOptional)) ?? false
         isHiddenCell = false
 
         // Compute display name
         if let cat = category, ["AASIXTENBG", "AASIXTENBL", "AASIXTENBJ"].contains(cat) {
             name = value
-        } else if let intVal = Int(value ?? ""), intVal > 0 {
-            name = noteList?.first { $0.type == value }?.name
+        } else if let intVal = Int(decodedValue ?? ""), intVal > 0 {
+            name = decodedNoteList?.first { $0.type == decodedValue }?.name
         } else {
             name = ""
         }
+        super.init()
     }
 
     func encode(to encoder: Encoder) throws {
@@ -94,6 +138,41 @@ final class ListModel: Codable {
         try c.encodeIfPresent(noteList, forKey: .noteList)
         try c.encodeIfPresent(value, forKey: .value)
         try c.encode(isOptional, forKey: .isOptional)
+    }
+
+    var xt_id: String? {
+        get { id }
+        set { id = newValue }
+    }
+
+    var xt_title: String? {
+        get { title }
+        set { title = newValue }
+    }
+
+    var xt_subtitle: String? {
+        get { subtitle }
+        set { subtitle = newValue }
+    }
+
+    var xt_code: String? {
+        get { code }
+        set { code = newValue }
+    }
+
+    var xt_cate: String? {
+        get { category }
+        set { category = newValue }
+    }
+
+    var xt_optional: Bool {
+        get { isOptional }
+        set { isOptional = newValue }
+    }
+
+    var xt_value: String? {
+        get { value }
+        set { value = newValue }
     }
 }
 
@@ -129,6 +208,10 @@ struct ItemsModel: Codable {
         try c.encode(hasMore, forKey: .hasMore)
         try c.encodeIfPresent(list, forKey: .list)
     }
+
+    var xt_title: String? { title }
+    var xt_sub_title: String? { subTitle }
+    var xt_more: Bool { hasMore }
 }
 
 // MARK: - Verify Base Model
@@ -145,7 +228,8 @@ struct VerifyBaseModel: Codable {
 
 // MARK: - Contact Item Model
 
-final class ContactItemModel: Codable {
+@objcMembers
+final class ContactItemModel: NSObject, Codable {
     var title: String?
     var fields: [AnyCodable]?
     var relation: [NoteModel]?
@@ -171,26 +255,71 @@ final class ContactItemModel: Codable {
         case relationType = "bedisixeNc"
     }
 
+    override init() {
+        super.init()
+    }
+
     required init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         title = try c.decodeIfPresent(String.self, forKey: .title)
         fields = try c.decodeIfPresent([AnyCodable].self, forKey: .fields)
-        relation = try c.decodeIfPresent([NoteModel].self, forKey: .relation)
+        let decodedRelation = try c.decodeIfPresent([NoteModel].self, forKey: .relation)
+        relation = decodedRelation
         if let nested = try? c.nestedContainer(keyedBy: NestedKeys.self, forKey: .nameNested) {
             name = try nested.decodeIfPresent(String.self, forKey: .name)
             mobile = try nested.decodeIfPresent(String.self, forKey: .mobile)
-            relationType = try nested.decodeIfPresent(String.self, forKey: .relationType)
+            let decodedRelationType = try nested.decodeIfPresent(String.self, forKey: .relationType)
+            relationType = decodedRelationType
+            thirdValue = decodedRelationType
+            thirdName = decodedRelation?.first { $0.type == decodedRelationType }?.name
+        } else {
+            thirdValue = nil
+            thirdName = nil
         }
         firstValue = name
         secondValue = mobile
-        thirdValue = relationType
-        thirdName = relation?.first { $0.type == relationType }?.name
+        super.init()
     }
 
     func encode(to encoder: Encoder) throws {
         var c = encoder.container(keyedBy: CodingKeys.self)
         try c.encodeIfPresent(title, forKey: .title)
         try c.encodeIfPresent(relation, forKey: .relation)
+    }
+
+    var xt_title: String? {
+        get { title }
+        set { title = newValue }
+    }
+
+    var xt_field: [AnyCodable]? {
+        get { fields }
+        set { fields = newValue }
+    }
+
+    var xt_name: String? {
+        get { name }
+        set { name = newValue }
+    }
+
+    var xt_mobile: String? {
+        get { mobile }
+        set { mobile = newValue }
+    }
+
+    var xt_relation: String? {
+        get { relationType }
+        set { relationType = newValue }
+    }
+
+    var threeValue: String? {
+        get { thirdValue }
+        set { thirdValue = newValue }
+    }
+
+    var threeName: String? {
+        get { thirdName }
+        set { thirdName = newValue }
     }
 }
 
@@ -244,6 +373,31 @@ final class PhotoModel: Codable {
         try c.encodeIfPresent(notes, forKey: .notes)
         try c.encodeIfPresent(list, forKey: .list)
     }
+
+    var xt_relation_id: String? {
+        get { relationId }
+        set { relationId = newValue }
+    }
+
+    var xt_img: String? {
+        get { imageURL }
+        set { imageURL = newValue }
+    }
+
+    var xt_type: String? {
+        get { type }
+        set { type = newValue }
+    }
+
+    var xt_name: String? {
+        get { name }
+        set { name = newValue }
+    }
+
+    var note: [OcrNoteModel]? {
+        get { notes }
+        set { notes = newValue }
+    }
 }
 
 // MARK: - OCR Model
@@ -270,11 +424,15 @@ struct FaceModel: Codable {
         case url = "relosixomNc"
         case isLiveness = "fonNsixc"
     }
+
+    var xt_relation_id: String? { relationId }
+    var xt_url: String? { url }
 }
 
 // MARK: - Bank Item Model
 
-final class BankItemModel: Codable {
+@objcMembers
+final class BankItemModel: NSObject, Codable {
     var notes: [NoteModel]?
     var channel: String?
     var channelName: String?
@@ -290,26 +448,56 @@ final class BankItemModel: Codable {
         case account = "ovrcsixutNc"
     }
 
+    override init() {
+        super.init()
+    }
+
     required init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        notes = try c.decodeIfPresent([NoteModel].self, forKey: .notes)
+        let decodedNotes = try c.decodeIfPresent([NoteModel].self, forKey: .notes)
+        notes = decodedNotes
+        let decodedChannel: String?
         if let nested = try? c.nestedContainer(keyedBy: NestedKeys.self, forKey: .channelNested) {
-            channel = try nested.decodeIfPresent(String.self, forKey: .channel)
+            decodedChannel = try nested.decodeIfPresent(String.self, forKey: .channel)
+            channel = decodedChannel
             let rawAccount = try nested.decodeIfPresent(String.self, forKey: .account)
             account = rawAccount
+        } else {
+            decodedChannel = nil
         }
-        channelName = notes?.first { $0.type == channel }?.name
+        channelName = decodedNotes?.first { $0.type == decodedChannel }?.name
 
         // Prefix phone with "0" if needed
         if account == nil || account!.isEmpty {
             let phone = UserSession.shared.currentUser?.phone ?? ""
             account = phone.hasPrefix("0") ? phone : "0\(phone)"
         }
+        super.init()
     }
 
     func encode(to encoder: Encoder) throws {
         var c = encoder.container(keyedBy: CodingKeys.self)
         try c.encodeIfPresent(notes, forKey: .notes)
+    }
+
+    var note: [NoteModel]? {
+        get { notes }
+        set { notes = newValue }
+    }
+
+    var xt_channel: String? {
+        get { channel }
+        set { channel = newValue }
+    }
+
+    var xt_channel_name: String? {
+        get { channelName }
+        set { channelName = newValue }
+    }
+
+    var xt_account: String? {
+        get { account }
+        set { account = newValue }
     }
 }
 

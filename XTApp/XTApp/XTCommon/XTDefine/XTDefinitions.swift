@@ -51,6 +51,10 @@ var XT_Tabbar_Height: CGFloat {
 // MARK: - App Helpers
 
 var XT_AppDelegate: AppDelegate? { UIApplication.shared.delegate as? AppDelegate }
+var XT_App_BundleId: String { AppConstants.bundleId }
+var XT_App_Version: String { AppConstants.appVersion }
+var XT_App_Name: String { AppConstants.appName }
+var XT_Privacy_Url: String { AppConstants.privacyURL }
 
 // MARK: - String Helper
 

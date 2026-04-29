@@ -39,19 +39,7 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
-// MARK: - API Response
-
-struct APIResponse<T: Decodable>: Decodable {
-    let code: Int?
-    let message: String?
-    let data: T?
-
-    enum CodingKeys: String, CodingKey {
-        case code
-        case message = "msg"
-        case data
-    }
-}
+typealias NetworkRawResponse = (data: [String: Any]?, message: String?)
 
 // MARK: - NetworkService
 
@@ -85,9 +73,7 @@ final class NetworkService {
 
     private func buildHeaders() -> [String: String] {
         var headers: [String: String] = [:]
-        XTDevice.shared.getIDFA(showAlert: false) { idfa in
-            headers["spdisixlleNc"] = idfa
-        }
+        headers["spdisixlleNc"] = ""
         headers["saursixnicNc"] = "ios"
         headers["andisixcNc"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
         headers["penisixsetumNc"] = XTDevice.shared.mobileStyle
@@ -106,7 +92,7 @@ final class NetworkService {
 
     func buildURL(path: String, queryParams: [String: String]? = nil) -> String {
         var url = resolvedBaseURL + "/" + path
-        var params: [String: String] = queryParams ?? [:]
+        let params: [String: String] = queryParams ?? [:]
         // Append device/auth params as query string for GET or as body identifier
         if !params.isEmpty {
             let query = params.map { "\($0.key)=\($0.value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? $0.value)" }
@@ -116,62 +102,19 @@ final class NetworkService {
         return url
     }
 
-    // MARK: - Generic Request
-
-    func request<T: Decodable>(
-        path: String,
-        method: HTTPMethod = .post,
-        body: [String: Any]? = nil,
-        queryParams: [String: String]? = nil,
-        responseType: T.Type
-    ) async throws -> T {
-        let urlString = buildURL(path: path, queryParams: queryParams)
-        guard let url = URL(string: urlString) else {
-            throw NetworkError.invalidURL
-        }
-
-        var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        let headers = buildHeaders()
-        for (key, value) in headers {
-            request.setValue(value, forHTTPHeaderField: key)
-        }
-
-        if method == .post, let body {
-            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        }
-
-        let (data, response) = try await session.data(for: request)
-
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw NetworkError.noData
-        }
-
-        if !(200..<300).contains(httpResponse.statusCode) {
-            let message = String(data: data, encoding: .utf8)
-            throw NetworkError.serverError(statusCode: httpResponse.statusCode, message: message)
-        }
-
-        do {
-            return try JSONDecoder().decode(T.self, from: data)
-        } catch {
-            throw NetworkError.decodingError(error)
-        }
-    }
-
     // MARK: - Raw Dictionary Request (for legacy data structures)
 
     func requestRaw(
         path: String,
         method: HTTPMethod = .post,
         body: [String: Any]? = nil,
-        queryParams: [String: String]? = nil
-    ) async throws -> (data: [String: Any]?, message: String?) {
+        queryParams: [String: String]? = nil,
+        completion: @escaping (Result<NetworkRawResponse, NetworkError>) -> Void
+    ) {
         let urlString = buildURL(path: path, queryParams: queryParams)
         guard let url = URL(string: urlString) else {
-            throw NetworkError.invalidURL
+            completion(.failure(.invalidURL))
+            return
         }
 
         var request = URLRequest(url: url)
@@ -187,25 +130,30 @@ final class NetworkService {
             request.httpBody = try? JSONSerialization.data(withJSONObject: body)
         }
 
-        let (data, response) = try await session.data(for: request)
+        session.dataTask(with: request) { data, response, error in
+            let result: Result<NetworkRawResponse, NetworkError>
 
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw NetworkError.noData
-        }
+            if let error {
+                result = .failure(.unknown(error))
+            } else if let httpResponse = response as? HTTPURLResponse,
+                      let data,
+                      let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                let message = json["msg"] as? String ?? json["message"] as? String
+                let code = json["code"] as? Int ?? 0
 
-        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-            throw NetworkError.noData
-        }
+                if !(200..<300).contains(httpResponse.statusCode) || code < 0 {
+                    result = .failure(.serverError(statusCode: httpResponse.statusCode, message: message))
+                } else {
+                    result = .success((json["data"] as? [String: Any], message))
+                }
+            } else {
+                result = .failure(.noData)
+            }
 
-        let message = json["msg"] as? String ?? json["message"] as? String
-        let code = json["code"] as? Int ?? 0
-
-        if !(200..<300).contains(httpResponse.statusCode) || code < 0 {
-            throw NetworkError.serverError(statusCode: httpResponse.statusCode, message: message)
-        }
-
-        let responseData = json["data"] as? [String: Any]
-        return (responseData, message)
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }.resume()
     }
 
     // MARK: - Multipart Upload
@@ -214,11 +162,13 @@ final class NetworkService {
         path: String,
         fileURL: URL,
         fieldName: String = "am",
-        params: [String: String] = [:]
-    ) async throws -> (data: [String: Any]?, message: String?) {
+        params: [String: String] = [:],
+        completion: @escaping (Result<NetworkRawResponse, NetworkError>) -> Void
+    ) {
         let urlString = buildURL(path: path)
         guard let url = URL(string: urlString) else {
-            throw NetworkError.invalidURL
+            completion(.failure(.invalidURL))
+            return
         }
 
         let boundary = "Boundary-\(UUID().uuidString)"
@@ -249,14 +199,22 @@ final class NetworkService {
         body.append("--\(boundary)--\r\n".data(using: .utf8)!)
         request.httpBody = body
 
-        let (data, _) = try await session.data(for: request)
+        session.dataTask(with: request) { data, _, error in
+            let result: Result<NetworkRawResponse, NetworkError>
 
-        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-            throw NetworkError.noData
-        }
+            if let error {
+                result = .failure(.unknown(error))
+            } else if let data,
+                      let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                let message = json["msg"] as? String ?? json["message"] as? String
+                result = .success((json["data"] as? [String: Any], message))
+            } else {
+                result = .failure(.noData)
+            }
 
-        let message = json["msg"] as? String ?? json["message"] as? String
-        let responseData = json["data"] as? [String: Any]
-        return (responseData, message)
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }.resume()
     }
 }

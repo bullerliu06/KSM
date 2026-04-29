@@ -14,14 +14,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     @objc var window: UIWindow?
     @objc var xt_nv: XTNavigationController?
+    private var dependencyContainer: AppDependencyContainer?
+    private var rootRouter: RootRouter?
+    private var launchCoordinator: LaunchCoordinator?
 
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = .white
-        window?.makeKeyAndVisible()
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.backgroundColor = .white
+        self.window = window
+        configureAppFlow(window: window)
+        window.makeKeyAndVisible()
 
         XTDevice.xt_share().xt_checkNetWork { haveNetwork in
             guard haveNetwork else { return }
@@ -37,14 +42,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
 
-        if XTUserManger.xt_isLogin() {
-            xt_mainView()
-        } else {
-            xt_loginView()
+        xt_publicDisposition()
+        launchCoordinator?.start()
+        return true
+    }
+
+    private func configureAppFlow(window: UIWindow) {
+        let dependencyContainer = AppDependencyContainer()
+        let rootRouter = dependencyContainer.makeRootRouter(window: window)
+        rootRouter.onNavigationControllerChange = { [weak self] navigationController in
+            self?.xt_nv = navigationController
         }
 
-        xt_publicDisposition()
-        return true
+        self.dependencyContainer = dependencyContainer
+        self.rootRouter = rootRouter
+        launchCoordinator = dependencyContainer.makeLaunchCoordinator(rootRouter: rootRouter)
     }
 
     private func reportIdfa() {
@@ -65,20 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     @objc func xt_mainView() {
-        let mainVC = XTTabBarController()
-        let navigationController = XTNavigationController(rootViewController: mainVC)
-        window?.rootViewController = navigationController
-        xt_nv = navigationController
+        rootRouter?.setRoot(.main, animated: false)
     }
 
     @objc func xt_loginView() {
-        xt_nv = nil
-        let codeVC = xtController("XTLoginCodeVC")
-        let navigationController = XTNavigationController(rootViewController: codeVC)
-        window?.rootViewController = navigationController
-    }
-
-    private func xtController(_ name: String) -> UIViewController {
-        (NSClassFromString(name) as? NSObject.Type)?.init() as? UIViewController ?? UIViewController()
+        rootRouter?.setRoot(.login, animated: false)
     }
 }

@@ -31,10 +31,10 @@ private extension KeyedDecodingContainer {
             return stringArray
         }
         if let intArray = try? decode([Int].self, forKey: key) {
-            return intArray.map(String.init)
+            return intArray.map { String($0) }
         }
         if let doubleArray = try? decode([Double].self, forKey: key) {
-            return doubleArray.map(String.init)
+            return doubleArray.map { String($0) }
         }
         return nil
     }

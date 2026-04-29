@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10B20012F6F000100000001 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B20002F6F000100000001 /* NetworkService.swift */; };
+		E10B20032F6F000100000001 /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B20022F6F000100000001 /* AppAPI.swift */; };
+		E10B10012F6E000100000001 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B10002F6E000100000001 /* AppDependencyContainer.swift */; };
+		E10B10032F6E000100000001 /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B10022F6E000100000001 /* LaunchCoordinator.swift */; };
+		E10B10052F6E000100000001 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B10042F6E000100000001 /* RootRouter.swift */; };
 		091A9EF52915F8CF6E6C39E8 /* XTDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD9F44E986E95D88B8C07 /* XTDefinitions.swift */; };
 		0BED96FB1BEF7FA895FD4633 /* XTSegControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D84EBF9514842B1FDAA9E /* XTSegControls.swift */; };
 		0EA8A9E32427ACEE43DADBFB /* XTWebViewProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2936D431EF15536BA90ED6 /* XTWebViewProgressView.swift */; };
@@ -237,6 +242,11 @@
 		DAA9C30F5E297CA00AF5060B /* UIImage+XTCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+XTCategory.swift"; sourceTree = "<group>"; };
 		E10B00002F6D000100000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E10B00032F6D000100000001 /* XTApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		E10B10002F6E000100000001 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		E10B10022F6E000100000001 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
+		E10B10042F6E000100000001 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		E10B20002F6F000100000001 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E10B20022F6F000100000001 /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
 		E10B00102F6D000100000001 /* XTFirstModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTFirstModels.swift; sourceTree = "<group>"; };
 		E10B00122F6D000100000001 /* XTMyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTMyModels.swift; sourceTree = "<group>"; };
 		E28B5A5929D21A31BB39D241 /* UIView+XTToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+XTToast.swift"; sourceTree = "<group>"; };
@@ -262,11 +272,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E10B10062F6E000100000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E10B10002F6E000100000001 /* AppDependencyContainer.swift */,
+				E10B10022F6E000100000001 /* LaunchCoordinator.swift */,
+				E10B10042F6E000100000001 /* RootRouter.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		1607D20D2C7F1F25007992F0 /* XTNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				E10B20002F6F000100000001 /* NetworkService.swift */,
+				E10B20022F6F000100000001 /* AppAPI.swift */,
 			);
-			path = XTNetwork;
+			path = XTCommon/XTNetwork;
 			sourceTree = "<group>";
 		};
 		1608E1552C8AA54D008E271F /* XTView */ = {
@@ -671,6 +693,7 @@
 				16F47F182C9C261E00F8BD39 /* XTApp.entitlements */,
 				16F1D4722C3F65F500BEC3FA /* AppDelegate.h */,
 				E10B00002F6D000100000001 /* AppDelegate.swift */,
+				E10B10062F6E000100000001 /* App */,
 				E10B00032F6D000100000001 /* XTApp-Bridging-Header.h */,
 				1627AF1F2C3F736D0059AC1E /* XTCommon */,
 				16E7A92A2C3FA5D500B06AC7 /* XTManger */,
@@ -819,6 +842,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10B20012F6F000100000001 /* NetworkService.swift in Sources */,
+				E10B20032F6F000100000001 /* AppAPI.swift in Sources */,
+				E10B10012F6E000100000001 /* AppDependencyContainer.swift in Sources */,
+				E10B10032F6E000100000001 /* LaunchCoordinator.swift in Sources */,
+				E10B10052F6E000100000001 /* RootRouter.swift in Sources */,
 				E10B00132F6D000100000001 /* XTMyModels.swift in Sources */,
 				E10B00012F6D000100000001 /* AppDelegate.swift in Sources */,
 				E10B00112F6D000100000001 /* XTFirstModels.swift in Sources */,
