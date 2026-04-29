@@ -21,7 +21,6 @@
 		0189589B2C6A1318001C97B8 /* PTMineNcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0189589A2C6A1318001C97B8 /* PTMineNcCell.m */; };
 		0189589E2C6A2983001C97B8 /* PTMineSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0189589D2C6A2983001C97B8 /* PTMineSettingController.m */; };
 		018958A12C6AFE06001C97B8 /* PTSettingLogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958A02C6AFE06001C97B8 /* PTSettingLogoutView.m */; };
-		018958A72C6B3796001C97B8 /* PTAuthPermissionAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958A62C6B3796001C97B8 /* PTAuthPermissionAlertView.m */; };
 		018958AA2C6B5182001C97B8 /* PTAuthentRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958A92C6B5182001C97B8 /* PTAuthentRouterManager.m */; };
 		018958B12C6B6E25001C97B8 /* PTAuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958B02C6B6E25001C97B8 /* PTAuthenticationController.m */; };
 		018958B92C6B7EB2001C97B8 /* PTAutheticationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 018958B82C6B7EB2001C97B8 /* PTAutheticationViewModel.m */; };
@@ -295,8 +294,6 @@
 		0189589F2C6AFE06001C97B8 /* PTSettingLogoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSettingLogoutView.h; sourceTree = "<group>"; };
 		018958A02C6AFE06001C97B8 /* PTSettingLogoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSettingLogoutView.m; sourceTree = "<group>"; };
 		018958A22C6B0CA6001C97B8 /* PTSettLogoutService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSettLogoutService.h; sourceTree = "<group>"; };
-		018958A52C6B3796001C97B8 /* PTAuthPermissionAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthPermissionAlertView.h; sourceTree = "<group>"; };
-		018958A62C6B3796001C97B8 /* PTAuthPermissionAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthPermissionAlertView.m; sourceTree = "<group>"; };
 		018958A82C6B5182001C97B8 /* PTAuthentRouterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthentRouterManager.h; sourceTree = "<group>"; };
 		018958A92C6B5182001C97B8 /* PTAuthentRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAuthentRouterManager.m; sourceTree = "<group>"; };
 		018958AF2C6B6E25001C97B8 /* PTAuthenticationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAuthenticationController.h; sourceTree = "<group>"; };
@@ -811,44 +808,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		010D9A652C5B678400116246 /* PTHomeService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PTHomeService;
-			sourceTree = "<group>";
-		};
-		010D9A692C5B6AA200116246 /* PTHomeModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PTHomeModel;
-			sourceTree = "<group>";
-		};
-		010D9A792C5B754E00116246 /* PTHomeViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PTHomeViewModel;
-			sourceTree = "<group>";
-		};
-		010D9A7D2C5B884800116246 /* PTHomeView */ = {
-			isa = PBXGroup;
-			children = (
-				018958A52C6B3796001C97B8 /* PTAuthPermissionAlertView.h */,
-				018958A62C6B3796001C97B8 /* PTAuthPermissionAlertView.m */,
-			);
-			path = PTHomeView;
-			sourceTree = "<group>";
-		};
-		010D9A812C5B9E2100116246 /* PTHomeCell */ = {
-			isa = PBXGroup;
-			children = (
-				1B0B74A82C81D2B200D52A32 /* EllipsePageControl */,
-			);
-			path = PTHomeCell;
-			sourceTree = "<group>";
-		};
 		010D9A912C5DE74E00116246 /* UUMarqueeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1150,22 +1109,9 @@
 		01A9213F2C52029D001E9B70 /* PTTabPages */ = {
 			isa = PBXGroup;
 			children = (
-				01A921432C5202F0001E9B70 /* PTHome */,
 				01A921442C520314001E9B70 /* PTMine */,
 			);
 			path = PTTabPages;
-			sourceTree = "<group>";
-		};
-		01A921432C5202F0001E9B70 /* PTHome */ = {
-			isa = PBXGroup;
-			children = (
-				010D9A812C5B9E2100116246 /* PTHomeCell */,
-				010D9A7D2C5B884800116246 /* PTHomeView */,
-				010D9A792C5B754E00116246 /* PTHomeViewModel */,
-				010D9A692C5B6AA200116246 /* PTHomeModel */,
-				010D9A652C5B678400116246 /* PTHomeService */,
-			);
-			path = PTHome;
 			sourceTree = "<group>";
 		};
 		01A921442C520314001E9B70 /* PTMine */ = {
@@ -1524,13 +1470,6 @@
 				1B0B74492C817C1F00D52A32 /* HXPhotoTypes.h */,
 			);
 			path = HXPhotoPicker;
-			sourceTree = "<group>";
-		};
-		1B0B74A82C81D2B200D52A32 /* EllipsePageControl */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EllipsePageControl;
 			sourceTree = "<group>";
 		};
 		1BB2E3532C75E2D70049D8DC /* Verify */ = {
@@ -2330,7 +2269,6 @@
 				1B0B74502C817C2000D52A32 /* PHAsset+HXExtension.m in Sources */,
 				1B1B77182C79DFA2002C8E23 /* PTContactVerifyPresenter.m in Sources */,
 				1B0B74A52C817C2000D52A32 /* HXPhotoTools.m in Sources */,
-				018958A72C6B3796001C97B8 /* PTAuthPermissionAlertView.m in Sources */,
 				1BB2E3642C75E4460049D8DC /* PTLiveVerifyVC.m in Sources */,
 				017BA3852C4E39A10012DC1E /* PTWebViewController.m in Sources */,
 				1B0B74A02C817C2000D52A32 /* HXPreviewVideoView.m in Sources */,
@@ -2552,6 +2490,10 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PTApp/PTHeader/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/PTApp/Library/**",
+				);
 				INFOPLIST_FILE = PTApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PesoPeso;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The APP is authorized to access albums, media content, and file permissions in order to provide OCR recognition for uploaded certificates and certification Camera.";
@@ -2600,6 +2542,10 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PTApp/PTHeader/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/PTApp/Library/**",
+				);
 				INFOPLIST_FILE = PTApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PesoPeso;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The APP is authorized to access albums, media content, and file permissions in order to provide OCR recognition for uploaded certificates and certification Camera.";
