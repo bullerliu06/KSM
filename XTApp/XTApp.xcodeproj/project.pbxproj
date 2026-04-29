@@ -119,10 +119,7 @@
 		160ACCA72C91326E00C646B8 /* XTCardApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTCardApi.h; sourceTree = "<group>"; };
 		160ACCAA2C9136B300C646B8 /* XTSegBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTSegBtn.h; sourceTree = "<group>"; };
 		160ACCAD2C91389C00C646B8 /* XTSegView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTSegView.h; sourceTree = "<group>"; };
-		160ACCB02C9144F800C646B8 /* XTWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTWalletView.h; sourceTree = "<group>"; };
-		160ACCB32C91450800C646B8 /* XTBankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTBankView.h; sourceTree = "<group>"; };
 		160ACCB62C917C9200C646B8 /* XTWalletCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTWalletCell.h; sourceTree = "<group>"; };
-		160ACCB92C91A52B00C646B8 /* XTBankAltView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTBankAltView.h; sourceTree = "<group>"; };
 		160ACCBC2C91B37E00C646B8 /* XTCardNextApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTCardNextApi.h; sourceTree = "<group>"; };
 		160C0CE72C92767900AE88EE /* XTMyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTMyViewModel.h; sourceTree = "<group>"; };
 		160C0CEA2C9277C500AE88EE /* XTExtendListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTExtendListModel.h; sourceTree = "<group>"; };
@@ -130,7 +127,6 @@
 		160C0CF02C927CB600AE88EE /* XTMyHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTMyHeadView.h; sourceTree = "<group>"; };
 		160C0CF32C92818400AE88EE /* XTHomeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTHomeApi.h; sourceTree = "<group>"; };
 		160C0CF62C92894B00AE88EE /* XTMyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTMyCell.h; sourceTree = "<group>"; };
-		160C0CF92C928C6200AE88EE /* XTOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTOrderVC.h; sourceTree = "<group>"; };
 		160C0CFC2C928CDD00AE88EE /* XTRepaymentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTRepaymentModel.h; sourceTree = "<group>"; };
 		160C0CFF2C92F8AC00AE88EE /* XTOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTOrderView.h; sourceTree = "<group>"; };
 		1627AF222C3F73D80059AC1E /* XTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTNavigationController.h; sourceTree = "<group>"; };
@@ -141,9 +137,6 @@
 		1627AF2D2C3F74BA0059AC1E /* XTImportHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTImportHeader.h; sourceTree = "<group>"; };
 		1627AF2E2C3F751F0059AC1E /* XTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPrefixHeader.pch; sourceTree = "<group>"; };
 		1627AF302C3F76920059AC1E /* YYTextAsyncLayer+XTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYTextAsyncLayer+XTCategory.h"; sourceTree = "<group>"; };
-		1627AF352C3F78510059AC1E /* XTFirstVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTFirstVC.h; sourceTree = "<group>"; };
-		163061C52C88578D00014575 /* XTMyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTMyVC.h; sourceTree = "<group>"; };
-		163061C82C885C0B00014575 /* XTLoginCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTLoginCodeVC.h; sourceTree = "<group>"; };
 		163061CB2C88709B00014575 /* XTRequestCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTRequestCenter.h; sourceTree = "<group>"; };
 		163061D02C88714500014575 /* XTMarketApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTMarketApi.h; sourceTree = "<group>"; };
 		163061D42C88864C00014575 /* XTHtmlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTHtmlVC.h; sourceTree = "<group>"; };
@@ -157,7 +150,6 @@
 		16911F942C40C9BF00FF8E23 /* UIView+XTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XTCategory.h"; sourceTree = "<group>"; };
 		16911F972C40CEB000FF8E23 /* UIView+XTPositioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XTPositioning.h"; sourceTree = "<group>"; };
 		16A2C4DB2CA2B55500FB72C8 /* XTLogoutApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTLogoutApi.h; sourceTree = "<group>"; };
-		16E7A9272C3FA5A200B06AC7 /* XTLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTLoginVC.h; sourceTree = "<group>"; };
 		16E7A92B2C3FA61C00B06AC7 /* XTUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTUserModel.h; sourceTree = "<group>"; };
 		16E7A92F2C3FA65400B06AC7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		16E7A9322C3FA67200B06AC7 /* XTMobile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = XTMobile.plist; sourceTree = "<group>"; };
@@ -174,22 +166,12 @@
 		16E7DA232C8D453A007A2784 /* XTVerifyBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyBaseModel.h; sourceTree = "<group>"; };
 		16E7DA262C8D4711007A2784 /* XTPersonApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPersonApi.h; sourceTree = "<group>"; };
 		16E7DA2A2C8D5895007A2784 /* XTVerifyHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyHeadView.h; sourceTree = "<group>"; };
-		16E7DA2D2C8D7BA2007A2784 /* XTSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTSelectCell.h; sourceTree = "<group>"; };
-		16E7DA302C8D859D007A2784 /* XTTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTTextCell.h; sourceTree = "<group>"; };
 		16E7DA332C8D8C72007A2784 /* NSDate+XTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+XTCategory.h"; sourceTree = "<group>"; };
-		16E7DA362C8D8D85007A2784 /* XTSelectDayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTSelectDayView.h; sourceTree = "<group>"; };
-		16E7DA392C8DAE0D007A2784 /* XTSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTSelectView.h; sourceTree = "<group>"; };
 		16E7DA3C2C8DAED1007A2784 /* XTSelectViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTSelectViewCell.h; sourceTree = "<group>"; };
-		16E7DA3F2C8DBC62007A2784 /* XTEmailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTEmailView.h; sourceTree = "<group>"; };
 		16E9832D2C8BF1B900F78D81 /* XTLocationApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTLocationApi.h; sourceTree = "<group>"; };
 		16E983302C8BF6F100F78D81 /* XTApplyApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTApplyApi.h; sourceTree = "<group>"; };
 		16E983332C8C00B200F78D81 /* XTDeviceApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTDeviceApi.h; sourceTree = "<group>"; };
-		16E983362C8C02A500F78D81 /* XTVerifyListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyListVC.h; sourceTree = "<group>"; };
-		16E983392C8C060B00F78D81 /* XTVerifyBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyBaseVC.h; sourceTree = "<group>"; };
 		16E983452C8C3F3F00F78D81 /* XTDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTDetailApi.h; sourceTree = "<group>"; };
-		16E983482C8C424500F78D81 /* XTVerifyContactVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyContactVC.h; sourceTree = "<group>"; };
-		16E9834B2C8C42F200F78D81 /* XTVerifyFaceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyFaceVC.h; sourceTree = "<group>"; };
-		16E9834E2C8C433100F78D81 /* XTVerifyBankVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyBankVC.h; sourceTree = "<group>"; };
 		16E983512C8C4C1D00F78D81 /* XTPushApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPushApi.h; sourceTree = "<group>"; };
 		16E983552C8C5D4200F78D81 /* XTVerifyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyViewModel.h; sourceTree = "<group>"; };
 		16E983582C8C5F6E00F78D81 /* XTVerifyListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyListModel.h; sourceTree = "<group>"; };
@@ -197,10 +179,8 @@
 		16E9B9F22C8EB05100C1C6F4 /* XTContactApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTContactApi.h; sourceTree = "<group>"; };
 		16E9B9F52C8ED65600C1C6F4 /* XTVerifyContactModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyContactModel.h; sourceTree = "<group>"; };
 		16E9B9F82C8ED67D00C1C6F4 /* XTContactItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTContactItemModel.h; sourceTree = "<group>"; };
-		16E9B9FB2C8EDA8A00C1C6F4 /* XTVerifyContactCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTVerifyContactCell.h; sourceTree = "<group>"; };
 		16E9B9FE2C8EFDC300C1C6F4 /* XTContactNextApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTContactNextApi.h; sourceTree = "<group>"; };
 		16E9DF4E2C8956F300319C8C /* XTLocationManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTLocationManger.h; sourceTree = "<group>"; };
-		16E9DF512C898A8700319C8C /* XTOCRVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTOCRVC.h; sourceTree = "<group>"; };
 		16E9DF542C8991C700319C8C /* XTIconModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTIconModel.h; sourceTree = "<group>"; };
 		16E9DF572C89923500319C8C /* XTBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTBannerModel.h; sourceTree = "<group>"; };
 		16E9DF5A2C89930200319C8C /* XTCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTCardModel.h; sourceTree = "<group>"; };
@@ -212,8 +192,6 @@
 		16E9DF702C89B15900319C8C /* XTCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTCellModel.h; sourceTree = "<group>"; };
 		16E9DF732C89B8FA00319C8C /* XTAssistiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTAssistiveView.h; sourceTree = "<group>"; };
 		16E9DF762C89BA4600319C8C /* XTRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTRoute.h; sourceTree = "<group>"; };
-		16E9DF7A2C89C15000319C8C /* XTSmallCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTSmallCell.h; sourceTree = "<group>"; };
-		16E9DF7D2C89C38A00319C8C /* XTBigCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTBigCell.h; sourceTree = "<group>"; };
 		16EAA2BA2C93C69A00C8D8CA /* XTOrderListApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTOrderListApi.h; sourceTree = "<group>"; };
 		16EAA2BD2C93C96100C8D8CA /* XTOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTOrderModel.h; sourceTree = "<group>"; };
 		16EAA2C02C93CF2800C8D8CA /* XTOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTOrderCell.h; sourceTree = "<group>"; };
@@ -228,7 +206,6 @@
 		16FB31FF2C8FD11500714BB1 /* XTOcrModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTOcrModel.h; sourceTree = "<group>"; };
 		16FB32022C8FD4B900714BB1 /* XTPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPhotoModel.h; sourceTree = "<group>"; };
 		16FB32052C8FD6BF00714BB1 /* XTPhotoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPhotoApi.h; sourceTree = "<group>"; };
-		16FB32082C8FDA9400714BB1 /* XTPhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPhotoCell.h; sourceTree = "<group>"; };
 		16FB320B2C902BE000714BB1 /* XTPhotoNextApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPhotoNextApi.h; sourceTree = "<group>"; };
 		16FB320E2C9038E500714BB1 /* XTFaceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTFaceModel.h; sourceTree = "<group>"; };
 		16FB32112C90396E00714BB1 /* XTAuthApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTAuthApi.h; sourceTree = "<group>"; };
@@ -416,8 +393,6 @@
 				163061D72C888B1900014575 /* XTView */,
 				16501D852C3FDE3E00F09727 /* XTModel */,
 				16E7A9402C3FC0A800B06AC7 /* XTApi */,
-				163061C82C885C0B00014575 /* XTLoginCodeVC.h */,
-				16E7A9272C3FA5A200B06AC7 /* XTLoginVC.h */,
 				F46CB4249DE81ACB694D0943 /* XTLoginFlowCoordinator.swift */,
 				E10B40002F71000200000001 /* XTLoginCodeVC.swift */,
 				E10B40022F71000200000001 /* XTLoginVC.swift */,
@@ -431,7 +406,6 @@
 				16E9DF792C89C12400319C8C /* XTView */,
 				16501D8A2C3FE40B00F09727 /* XTModel */,
 				16501D862C3FE32600F09727 /* XTApi */,
-				1627AF352C3F78510059AC1E /* XTFirstVC.h */,
 				E4AD61120E3AC0C7FC23D829 /* XTFirstShared.swift */,
 				E10B50002F72000100000001 /* XTFirstVC.swift */,
 				E10B50022F72000100000001 /* XTFirstCards.swift */,
@@ -447,9 +421,6 @@
 				1608E1552C8AA54D008E271F /* XTView */,
 				163061C42C88576900014575 /* XTApi */,
 				163061C32C88575E00014575 /* XTModel */,
-				163061C52C88578D00014575 /* XTMyVC.h */,
-				1608E1522C8AA100008E271F /* XTSetVC.h */,
-				160C0CF92C928C6200AE88EE /* XTOrderVC.h */,
 				FA3A64E150944AB0566D3E07 /* XTMyShared.swift */,
 				E10B30002F71000100000001 /* XTMyVC.swift */,
 				E10B30022F71000100000001 /* XTSetVC.swift */,
@@ -606,12 +577,6 @@
 				16E7DA292C8D586E007A2784 /* XTView */,
 				16E983542C8C5D1900F78D81 /* XTModel */,
 				16E7A9452C3FC46200B06AC7 /* XTApi */,
-				16E983362C8C02A500F78D81 /* XTVerifyListVC.h */,
-				16E983392C8C060B00F78D81 /* XTVerifyBaseVC.h */,
-				16E983482C8C424500F78D81 /* XTVerifyContactVC.h */,
-				16E9DF512C898A8700319C8C /* XTOCRVC.h */,
-				16E9834B2C8C42F200F78D81 /* XTVerifyFaceVC.h */,
-				16E9834E2C8C433100F78D81 /* XTVerifyBankVC.h */,
 				5C38AC0BD8C11B6A8831C9F6 /* XTVerifyBaseVC.swift */,
 				5C38AC0AD8C11B6A8831C9F6 /* XTVerifyListVC.swift */,
 				5C38AC0CD8C11B6A8831C9F6 /* XTVerifyContactVC.swift */,
@@ -649,20 +614,10 @@
 			isa = PBXGroup;
 			children = (
 				16E7DA2A2C8D5895007A2784 /* XTVerifyHeadView.h */,
-				16E7DA2D2C8D7BA2007A2784 /* XTSelectCell.h */,
-				16E7DA302C8D859D007A2784 /* XTTextCell.h */,
-				16E7DA362C8D8D85007A2784 /* XTSelectDayView.h */,
-				16E7DA392C8DAE0D007A2784 /* XTSelectView.h */,
 				16E7DA3C2C8DAED1007A2784 /* XTSelectViewCell.h */,
-				16E7DA3F2C8DBC62007A2784 /* XTEmailView.h */,
-				16E9B9FB2C8EDA8A00C1C6F4 /* XTVerifyContactCell.h */,
-				16FB32082C8FDA9400714BB1 /* XTPhotoCell.h */,
 				160ACCAA2C9136B300C646B8 /* XTSegBtn.h */,
 				160ACCAD2C91389C00C646B8 /* XTSegView.h */,
-				160ACCB02C9144F800C646B8 /* XTWalletView.h */,
-				160ACCB32C91450800C646B8 /* XTBankView.h */,
 				160ACCB62C917C9200C646B8 /* XTWalletCell.h */,
-				160ACCB92C91A52B00C646B8 /* XTBankAltView.h */,
 				3B7D84EBF9514842B1FDAA9E /* XTSegControls.swift */,
 				6CBED69F4D3D1DCDD338B329 /* XTVerifySmallViews.swift */,
 				F9E8445A27E0ADA7551331EC /* XTWalletCell.swift */,
@@ -710,13 +665,9 @@
 		16E9DF792C89C12400319C8C /* XTView */ = {
 			isa = PBXGroup;
 			children = (
-				16E9DF7A2C89C15000319C8C /* XTSmallCell.h */,
-				16E9DF7D2C89C38A00319C8C /* XTBigCell.h */,
 				1608E14C2C8A9366008E271F /* XTBannerChildCell.h */,
 				1608E1492C8A92C6008E271F /* XTBannerCell.h */,
 				1608E14F2C8A9E51008E271F /* XTFirstFootCell.h */,
-				1608E16C2C8AF68E008E271F /* XTMarqueeView.h */,
-				1608E16F2C8AFCAE008E271F /* XTProductCell.h */,
 				16029B712CA166A8004F040F /* XTNoticeCell.h */,
 				16029B772CA178F8004F040F /* XTPopUpView.h */,
 				9F6A707942F8E3E809CC6717 /* XTFirstFootCell.swift */,
