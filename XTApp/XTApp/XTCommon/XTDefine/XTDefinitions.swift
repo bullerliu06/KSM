@@ -27,6 +27,10 @@ enum NavBackType {
     case black
 }
 
+typealias XT_BackType = NavBackType
+let XT_BackType_W: XT_BackType = .white
+let XT_BackType_B: XT_BackType = .black
+
 enum VerifyType {
     case base
     case contact
@@ -55,6 +59,15 @@ var XT_App_BundleId: String { AppConstants.bundleId }
 var XT_App_Version: String { AppConstants.appVersion }
 var XT_App_Name: String { AppConstants.appName }
 var XT_Privacy_Url: String { AppConstants.privacyURL }
+var XT_DocumentPath: String { AppConstants.documentPath }
+var XT_Locality_Url_Path: String { AppConstants.localURLFilePath }
+
+func XT_Controller_Init(_ controllerName: String) -> UIViewController {
+    guard let controllerClass = NSClassFromString(controllerName) as? UIViewController.Type else {
+        return UIViewController()
+    }
+    return controllerClass.init()
+}
 
 // MARK: - String Helper
 

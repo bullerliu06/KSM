@@ -10,7 +10,7 @@ import UIKit
 // MARK: - Note Model (selection option)
 
 @objcMembers
-final class NoteModel: NSObject, Codable {
+class NoteModel: NSObject, Codable {
     var name: String?
     var type: String?
     var icon: String?
@@ -58,15 +58,38 @@ final class NoteModel: NSObject, Codable {
 
 // MARK: - OCR Note Model
 
-struct OcrNoteModel: Codable {
+@objcMembers
+final class OcrNoteModel: NoteModel {
     var backgroundImageURL: String?
-    var name: String?
-    var type: String?
 
     enum CodingKeys: String, CodingKey {
         case backgroundImageURL = "ovrpsixunchNc"
         case name = "roansixizeNc"
         case type = "ceNcsix"
+    }
+
+    override init() {
+        super.init()
+    }
+
+    required init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        super.init()
+        backgroundImageURL = try c.decodeIfPresent(String.self, forKey: .backgroundImageURL)
+        name = try c.decodeIfPresent(String.self, forKey: .name)
+        type = try c.decodeIfPresent(String.self, forKey: .type)
+    }
+
+    override func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encodeIfPresent(backgroundImageURL, forKey: .backgroundImageURL)
+        try c.encodeIfPresent(name, forKey: .name)
+        try c.encodeIfPresent(type, forKey: .type)
+    }
+
+    var xt_bg_img: String? {
+        get { backgroundImageURL }
+        set { backgroundImageURL = newValue }
     }
 }
 
@@ -178,12 +201,13 @@ final class ListModel: NSObject, Codable {
 
 // MARK: - Items Model (section with fields)
 
-struct ItemsModel: Codable {
+@objcMembers
+final class ItemsModel: NSObject, Codable {
     var title: String?
     var subTitle: String?
-    var hasMore: Bool
+    var hasMore: Bool = false
     var list: [ListModel]?
-    var hiddenChild: Bool
+    var hiddenChild: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case title = "fldgsixeNc"
@@ -192,13 +216,17 @@ struct ItemsModel: Codable {
         case list = "xathsixosisNc"
     }
 
+    override init() {
+        super.init()
+    }
+
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         title = try c.decodeIfPresent(String.self, forKey: .title)
         subTitle = try c.decodeIfPresent(String.self, forKey: .subTitle)
         hasMore = (try? c.decode(Bool.self, forKey: .hasMore)) ?? false
         list = try c.decodeIfPresent([ListModel].self, forKey: .list)
-        hiddenChild = false
+        super.init()
     }
 
     func encode(to encoder: Encoder) throws {
@@ -394,9 +422,9 @@ final class PhotoModel: Codable {
         set { name = newValue }
     }
 
-    var note: [OcrNoteModel]? {
+    var note: [XTNoteModel]? {
         get { notes }
-        set { notes = newValue }
+        set { notes = newValue as? [OcrNoteModel] }
     }
 }
 
@@ -503,8 +531,9 @@ final class BankItemModel: NSObject, Codable {
 
 // MARK: - Bank Model
 
-struct BankModel: Codable {
-    var countdown: Int
+@objcMembers
+final class BankModel: NSObject, Codable {
+    var countdown: Int = 0
     var bankItem: BankItemModel?
     var walletItem: BankItemModel?
 
@@ -513,15 +542,50 @@ struct BankModel: Codable {
         case bankItem = "murasixyNc"
         case walletItem = "abensixtlyNc"
     }
+
+    override init() {
+        super.init()
+    }
+
+    required init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        countdown = (try? c.decode(Int.self, forKey: .countdown)) ?? 0
+        bankItem = try c.decodeIfPresent(BankItemModel.self, forKey: .bankItem)
+        walletItem = try c.decodeIfPresent(BankItemModel.self, forKey: .walletItem)
+        super.init()
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encode(countdown, forKey: .countdown)
+        try c.encodeIfPresent(bankItem, forKey: .bankItem)
+        try c.encodeIfPresent(walletItem, forKey: .walletItem)
+    }
+
+    var xt_countdown: Int {
+        get { countdown }
+        set { countdown = newValue }
+    }
+
+    var bankModel: XTBankItemModel? {
+        get { bankItem }
+        set { bankItem = newValue }
+    }
+
+    var walletModel: XTBankItemModel? {
+        get { walletItem }
+        set { walletItem = newValue }
+    }
 }
 
 // MARK: - Verify List Model
 
-struct VerifyListModel: Codable {
+@objcMembers
+final class VerifyListModel: NSObject, Codable {
     var stepCode: String?
     var title: String?
     var status: String?
-    var isCompleted: Bool
+    var isCompleted: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case stepCode = "noassixsessabilityNc"
@@ -530,12 +594,45 @@ struct VerifyListModel: Codable {
         case isCompleted = "frllsixyNc"
     }
 
+    override init() {
+        super.init()
+    }
+
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         stepCode = try c.decodeIfPresent(String.self, forKey: .stepCode)
         title = try c.decodeIfPresent(String.self, forKey: .title)
         status = try c.decodeIfPresent(String.self, forKey: .status)
         isCompleted = (try? c.decode(Bool.self, forKey: .isCompleted)) ?? false
+        super.init()
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encodeIfPresent(stepCode, forKey: .stepCode)
+        try c.encodeIfPresent(title, forKey: .title)
+        try c.encodeIfPresent(status, forKey: .status)
+        try c.encode(isCompleted, forKey: .isCompleted)
+    }
+
+    var noassixsessabilityNc: String? {
+        get { stepCode }
+        set { stepCode = newValue }
+    }
+
+    var fldgsixeNc: String? {
+        get { title }
+        set { title = newValue }
+    }
+
+    var doabsixleNc: String? {
+        get { status }
+        set { status = newValue }
+    }
+
+    var frllsixyNc: Bool {
+        get { isCompleted }
+        set { isCompleted = newValue }
     }
 }
 

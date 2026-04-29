@@ -212,11 +212,11 @@ class XTHtmlVC: XTBaseVC, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHan
             guard let self else { return }
             if !NSString.xt_isEmpty(code) {
                 XTUtility.xt_atHideProgress(self.view)
-                XTRoute.xt_share().goVerifyItem(code ?? "", productId: productId, orderId: orderId ?? "", success: nil)
-            } else if let orderId {
+                XTRoute.xt_share().goVerifyItem(code, productId: productId, orderId: orderId, success: nil)
+            } else if !NSString.xt_isEmpty(orderId) {
                 self.viewModel.xt_push(orderId) { url in
                     XTUtility.xt_atHideProgress(self.view)
-                    XTRoute.xt_share().goHtml(url ?? "", success: nil)
+                    XTRoute.xt_share().goHtml(url, success: nil)
                 } failure: {
                     XTUtility.xt_atHideProgress(self.view)
                 }
