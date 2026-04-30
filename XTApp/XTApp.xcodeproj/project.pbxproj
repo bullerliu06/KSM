@@ -58,6 +58,10 @@
 		8238B6100A255C1224806EDE /* XTNavigationTabControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CE8C59948C5236B725DC1 /* XTNavigationTabControllers.swift */; };
 		83DAD43A9BE1BA0980D4C87A /* XTFirstFootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A707942F8E3E809CC6717 /* XTFirstFootCell.swift */; };
 		8BCC52C11041083518F22B2B /* XTRequestCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE76A51BC1B7F05C73EA6AE /* XTRequestCenter.swift */; };
+		E10B71012F74000200000001 /* XTRequestCenterShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B71002F74000200000001 /* XTRequestCenterShared.swift */; };
+		E10B71032F74000200000001 /* XTRequestCenter+Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B71022F74000200000001 /* XTRequestCenter+Market.swift */; };
+		E10B71052F74000200000001 /* XTRequestCenter+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B71042F74000200000001 /* XTRequestCenter+Location.swift */; };
+		E10B71072F74000200000001 /* XTRequestCenter+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B71062F74000200000001 /* XTRequestCenter+Device.swift */; };
 		9563DE3966BE2B5068CEF733 /* XTAssistiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F1C5A9ABF8BBC73CE2ABC /* XTAssistiveView.swift */; };
 		98BC92A8CC95205C714CF453 /* XTMyHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2C4E163D1E11DC9C92844 /* XTMyHeadView.swift */; };
 		9F72B0F65709CF19C0757110 /* XTHtmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02E64E83D42C005FA0799E /* XTHtmlVC.swift */; };
@@ -141,7 +145,6 @@
 		1627AF2D2C3F74BA0059AC1E /* XTImportHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTImportHeader.h; sourceTree = "<group>"; };
 		1627AF2E2C3F751F0059AC1E /* XTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTPrefixHeader.pch; sourceTree = "<group>"; };
 		1627AF302C3F76920059AC1E /* YYTextAsyncLayer+XTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYTextAsyncLayer+XTCategory.h"; sourceTree = "<group>"; };
-		163061CB2C88709B00014575 /* XTRequestCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTRequestCenter.h; sourceTree = "<group>"; };
 		163061D02C88714500014575 /* XTMarketApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTMarketApi.h; sourceTree = "<group>"; };
 		163061D42C88864C00014575 /* XTHtmlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTHtmlVC.h; sourceTree = "<group>"; };
 		163061D82C888B3B00014575 /* XTCodeAltView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTCodeAltView.h; sourceTree = "<group>"; };
@@ -271,6 +274,10 @@
 		E10B70042F74000100000001 /* XTDeviceTrackingApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTDeviceTrackingApis.swift; sourceTree = "<group>"; };
 		E10B70062F74000100000001 /* XTLoanApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTLoanApis.swift; sourceTree = "<group>"; };
 		E10B70082F74000100000001 /* XTSessionApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTSessionApis.swift; sourceTree = "<group>"; };
+		E10B71002F74000200000001 /* XTRequestCenterShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTRequestCenterShared.swift; sourceTree = "<group>"; };
+		E10B71022F74000200000001 /* XTRequestCenter+Market.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "XTRequestCenter+Market.swift"; sourceTree = "<group>"; };
+		E10B71042F74000200000001 /* XTRequestCenter+Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "XTRequestCenter+Location.swift"; sourceTree = "<group>"; };
+		E10B71062F74000200000001 /* XTRequestCenter+Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "XTRequestCenter+Device.swift"; sourceTree = "<group>"; };
 		E10B00102F6D000100000001 /* XTFirstModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTFirstModels.swift; sourceTree = "<group>"; };
 		E10B00122F6D000100000001 /* XTMyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTMyModels.swift; sourceTree = "<group>"; };
 		E28B5A5929D21A31BB39D241 /* UIView+XTToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+XTToast.swift"; sourceTree = "<group>"; };
@@ -466,8 +473,11 @@
 			isa = PBXGroup;
 			children = (
 				163061CF2C88710E00014575 /* XTAPi */,
-				163061CB2C88709B00014575 /* XTRequestCenter.h */,
+				E10B71002F74000200000001 /* XTRequestCenterShared.swift */,
 				EFE76A51BC1B7F05C73EA6AE /* XTRequestCenter.swift */,
+				E10B71022F74000200000001 /* XTRequestCenter+Market.swift */,
+				E10B71042F74000200000001 /* XTRequestCenter+Location.swift */,
+				E10B71062F74000200000001 /* XTRequestCenter+Device.swift */,
 			);
 			path = XTRequestCenter;
 			sourceTree = "<group>";
@@ -883,7 +893,11 @@
 				DCFC15CC8179BD9B0E0546BA /* XTMyViewModel.swift in Sources */,
 				F2A0B325B77C66A1E76B61F1 /* XTFirstViewModel.swift in Sources */,
 				4478E0BC35C8889D3E1D9DA3 /* XTUserSession.swift in Sources */,
+				E10B71012F74000200000001 /* XTRequestCenterShared.swift in Sources */,
 				8BCC52C11041083518F22B2B /* XTRequestCenter.swift in Sources */,
+				E10B71032F74000200000001 /* XTRequestCenter+Market.swift in Sources */,
+				E10B71052F74000200000001 /* XTRequestCenter+Location.swift in Sources */,
+				E10B71072F74000200000001 /* XTRequestCenter+Device.swift in Sources */,
 				E253418598B4F43C41D35164 /* XTLocationManger.swift in Sources */,
 				8238B6100A255C1224806EDE /* XTNavigationTabControllers.swift in Sources */,
 				539310ABFF4DC1E702A33916 /* XTBaseVC.swift in Sources */,
