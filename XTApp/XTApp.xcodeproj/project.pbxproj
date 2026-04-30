@@ -23,6 +23,11 @@
 		E10B10012F6E000100000001 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B10002F6E000100000001 /* AppDependencyContainer.swift */; };
 		E10B10032F6E000100000001 /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B10022F6E000100000001 /* LaunchCoordinator.swift */; };
 		E10B10052F6E000100000001 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B10042F6E000100000001 /* RootRouter.swift */; };
+		E10B70012F74000100000001 /* XTApiShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B70002F74000100000001 /* XTApiShared.swift */; };
+		E10B70032F74000100000001 /* XTAuthenticationApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B70022F74000100000001 /* XTAuthenticationApis.swift */; };
+		E10B70052F74000100000001 /* XTDeviceTrackingApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B70042F74000100000001 /* XTDeviceTrackingApis.swift */; };
+		E10B70072F74000100000001 /* XTLoanApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B70062F74000100000001 /* XTLoanApis.swift */; };
+		E10B70092F74000100000001 /* XTSessionApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B70082F74000100000001 /* XTSessionApis.swift */; };
 		091A9EF52915F8CF6E6C39E8 /* XTDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD9F44E986E95D88B8C07 /* XTDefinitions.swift */; };
 		0BED96FB1BEF7FA895FD4633 /* XTSegControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D84EBF9514842B1FDAA9E /* XTSegControls.swift */; };
 		0EA8A9E32427ACEE43DADBFB /* XTWebViewProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2936D431EF15536BA90ED6 /* XTWebViewProgressView.swift */; };
@@ -46,7 +51,6 @@
 		5E644A290552F1A48F53057E /* XTVerifySmallViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED69F4D3D1DCDD338B329 /* XTVerifySmallViews.swift */; };
 		5F015BFBB7153CA86E66D289 /* UIView+XTCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FE7AD1E44B49BEC5016C9 /* UIView+XTCategory.swift */; };
 		612A59E287CBF53D393DCF97 /* XTAuthenticationSelectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA97E3A5F21EE75966DF2D /* XTAuthenticationSelectViews.swift */; };
-		6BABF600F33A45D3BB0825BE /* XTNetworkApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AB9B7494BD1CE7C103007 /* XTNetworkApis.swift */; };
 		6C60B542342EC1A115AA4B23 /* XTMyShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A64E150944AB0566D3E07 /* XTMyShared.swift */; };
 		E10B60012F73000100000001 /* XTAuthenticationContactViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B60002F73000100000001 /* XTAuthenticationContactViews.swift */; };
 		E10B60032F73000100000001 /* XTAuthenticationBankViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B60022F73000100000001 /* XTAuthenticationBankViews.swift */; };
@@ -262,11 +266,15 @@
 		E10B10082F70000100000001 /* LoanFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanFlowCoordinator.swift; sourceTree = "<group>"; };
 		E10B20002F6F000100000001 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E10B20022F6F000100000001 /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
+		E10B70002F74000100000001 /* XTApiShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTApiShared.swift; sourceTree = "<group>"; };
+		E10B70022F74000100000001 /* XTAuthenticationApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTAuthenticationApis.swift; sourceTree = "<group>"; };
+		E10B70042F74000100000001 /* XTDeviceTrackingApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTDeviceTrackingApis.swift; sourceTree = "<group>"; };
+		E10B70062F74000100000001 /* XTLoanApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTLoanApis.swift; sourceTree = "<group>"; };
+		E10B70082F74000100000001 /* XTSessionApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTSessionApis.swift; sourceTree = "<group>"; };
 		E10B00102F6D000100000001 /* XTFirstModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTFirstModels.swift; sourceTree = "<group>"; };
 		E10B00122F6D000100000001 /* XTMyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTMyModels.swift; sourceTree = "<group>"; };
 		E28B5A5929D21A31BB39D241 /* UIView+XTToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+XTToast.swift"; sourceTree = "<group>"; };
 		E4AD61120E3AC0C7FC23D829 /* XTFirstShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTFirstShared.swift; sourceTree = "<group>"; };
-		E98AB9B7494BD1CE7C103007 /* XTNetworkApis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTNetworkApis.swift; sourceTree = "<group>"; };
 		EFE76A51BC1B7F05C73EA6AE /* XTRequestCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTRequestCenter.swift; sourceTree = "<group>"; };
 		F27580AB02977728C99ECD10 /* NSDate+XTCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSDate+XTCategory.swift"; sourceTree = "<group>"; };
 		F46CB4249DE81ACB694D0943 /* XTLoginFlowCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XTLoginFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -471,7 +479,11 @@
 				16E9832D2C8BF1B900F78D81 /* XTLocationApi.h */,
 				16E983332C8C00B200F78D81 /* XTDeviceApi.h */,
 				0157859D2CA3DF2D00EB782F /* XTUpAdidApi.h */,
-				E98AB9B7494BD1CE7C103007 /* XTNetworkApis.swift */,
+				E10B70002F74000100000001 /* XTApiShared.swift */,
+				E10B70022F74000100000001 /* XTAuthenticationApis.swift */,
+				E10B70042F74000100000001 /* XTDeviceTrackingApis.swift */,
+				E10B70062F74000100000001 /* XTLoanApis.swift */,
+				E10B70082F74000100000001 /* XTSessionApis.swift */,
 			);
 			path = XTAPi;
 			sourceTree = "<group>";
@@ -861,7 +873,11 @@
 				E10B00012F6D000100000001 /* AppDelegate.swift in Sources */,
 				E10B00112F6D000100000001 /* XTFirstModels.swift in Sources */,
 				B3512EE6B48BD3CA3CF63C96 /* XTAuthenticationModels.swift in Sources */,
-				6BABF600F33A45D3BB0825BE /* XTNetworkApis.swift in Sources */,
+				E10B70012F74000100000001 /* XTApiShared.swift in Sources */,
+				E10B70032F74000100000001 /* XTAuthenticationApis.swift in Sources */,
+				E10B70052F74000100000001 /* XTDeviceTrackingApis.swift in Sources */,
+				E10B70072F74000100000001 /* XTLoanApis.swift in Sources */,
+				E10B70092F74000100000001 /* XTSessionApis.swift in Sources */,
 				15293D86E3461B586FFD977F /* XTCommonCells.swift in Sources */,
 				DB754B6FAE1F694501FEBD90 /* XTLoginViewModel.swift in Sources */,
 				DCFC15CC8179BD9B0E0546BA /* XTMyViewModel.swift in Sources */,
